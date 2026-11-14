@@ -162,6 +162,17 @@ async function run() {
   await call('GET', '/packages', undefined, token, 200, 'Package catalog');
   await call('GET', '/packages?limit=0', undefined, token, 400, 'Invalid package pagination');
   await call('GET', `/packages/${bundle.id}`, undefined, token, 200, 'Package details');
+  await call('POST', '/packages', { name: 'Forbidden', classQuantity: 1,
+    price: 1, description: 'Permission fixture' }, token, 403,
+    'Client cannot create package');
+  await call('PATCH', `/packages/${bundle.id}`, { price: 1 }, token, 403,
+    'Client cannot update package');
+  await call('DELETE', `/packages/${bundle.id}`, undefined, token, 403,
+    'Client cannot delete package');
+  await call('PATCH', `/classes/${item.id}`, { capacity: 1 }, token, 403,
+    'Client cannot update class');
+  await call('DELETE', `/classes/${item.id}`, undefined, token, 403,
+    'Client cannot delete class');
   await call('GET', '/packages/2147483647', undefined, token, 404, 'Missing package');
   await call('PATCH', `/packages/${bundle.id}`, { price: 125000 }, admin,
     200, 'Update package');
