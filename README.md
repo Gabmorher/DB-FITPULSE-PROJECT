@@ -12,12 +12,13 @@ API REST para gestionar clientes, clases, paquetes, compras, reservas, asistenci
 
 ```sh
 npm run db:setup
+npm run db:migrate-passwords
 npm run db:seed
 npm run db:demo
 npm start
 ```
 
-Con la configuración de ejemplo: [Swagger UI](http://localhost:5000/docs) y [OpenAPI](http://localhost:5000/openapi.json). `db:setup` crea el esquema; `db:seed` prepara el administrador y paquetes; `db:demo` prepara un cliente y una reserva de una clase terminada para probar asistencia. Estos comandos no actualizan automáticamente una base antigua incompatible.
+Con la configuración de ejemplo: [Mi progreso](http://localhost:5000/progress.html), [Mis marcas](http://localhost:5000/personal-records.html), [Swagger UI](http://localhost:5000/docs) y [OpenAPI](http://localhost:5000/openapi.json). `db:setup` crea el esquema; `db:migrate-passwords` convierte las contraseñas antiguas a Argon2id; `db:seed` prepara el administrador y paquetes; `db:demo` prepara un cliente y una reserva de una clase terminada para probar asistencia. Antes de migrar una base existente, detén la API, guarda una copia privada y revisa `DB_NAME`. La migración conserva contraseñas de acceso e identificadores; no transforma esquemas incompatibles. Consulta [la autenticación](docs/third-cut/password-security.md).
 
 Si ya tienes datos, respáldalos y compara el esquema con `database/schema.sql`. El arranque detecta tablas o columnas faltantes, identificadores sin `AUTO_INCREMENT` y columnas adicionales obligatorias sin valor predeterminado. **Esta validación no sustituye una migración ni comprueba todos los tipos, valores predeterminados o restricciones.** No importes un esquema de cinco tablas sobre esta versión. En Workbench, selecciona la base correcta y ejecuta `database/verify-schema.sql` para inspeccionarla sin cambiar registros.
 
@@ -37,8 +38,10 @@ Importa `evidence/FitPulse.postman_collection.json` en Postman, configura sus ci
 Configura `TEST_DB_NAME` con una base desechable distinta de `DB_NAME`, terminada en `_test`. Debe existir y la cuenta MySQL debe tener permisos para crear tablas. El comprobador adicional crea y elimina únicamente una base temporal propia; necesita permisos de creación de bases.
 
 ```sh
+npm run test:passwords
 npm run test:schema
 npm test
+npm run test:credential-tools
 npm run db:inspect
 ```
 
@@ -51,6 +54,8 @@ npm run db:inspect
 | `database/` | Esquema canónico e inspección SQL |
 | `src/routes`, `controllers`, `services`, `repositories` | Rutas, HTTP, reglas de negocio y SQL |
 | `src/config`, `middleware`, `utils` | Conexión, configuración y controles comunes |
+| `public/` | Dos páginas HTML con acceso, progreso y CRUD de marcas, CSS y JavaScript compartidos |
+| `docs/third-cut/` | Autenticación, interfaz y fragmentos LaTeX de la evolución actual |
 | `docs/openapi.json` | Contrato navegable de las 35 operaciones |
 | `docs/informe/` | Cinco bloques LaTeX de Laura, diagramas y PDF compilado |
 | `docs/trazabilidad.csv` | RF → historia → tabla → endpoint → petición Postman exacta |
@@ -62,4 +67,8 @@ npm run db:inspect
 
 Las reservas y las marcas personales tienen tablas propias. La asistencia se mantiene al eliminar una reseña; el progreso se calcula sobre asistencia, no sobre compras o reseñas. Los cupos se controlan en una transacción. No existe cancelación de reservas ni consumo automático de créditos de paquetes.
 
-Esta entrega contiene el backend y los bloques del informe de Laura. No incluye una interfaz web ni un panel visual de administración. RF-11 queda implementado en sus permisos de backend; su pantalla requiere el trabajo de interfaz. **RNF-01 permanece pendiente: las contraseñas se almacenan en texto plano.** Esta versión corresponde al alcance histórico del segundo corte; no debe desplegarse con cuentas reales. La evolución con Argon2id de la otra API no se presenta como implementada aquí.
+La versión actual incorpora Argon2id con salt independiente, migración de contraseñas y las dos páginas de Laura: progreso y marcas personales. Se conservan las siete tablas y las 35 operaciones de negocio. Las páginas usan datos reales de la API y permiten registro e inicio de sesión mediante un diálogo compartido. El catálogo, las compras, las reservas y el panel administrativo no tienen todavía sus propias pantallas web en este repositorio. RF-11 conserva sus permisos de backend.
+
+Figma rechazó la lectura del enlace proporcionado: el diseño de las páginas es una propuesta propia pendiente de contrastar con el prototipo. Los archivos en `docs/informe/` corresponden a la revisión histórica del segundo corte; la etapa actual está documentada en `docs/third-cut/`. La migración debe ejecutarse en cada instalación existente: el código publicado no modifica por sí solo tu base local.
+
+Para usar las páginas, inicia sesión con la cuenta de cliente preparada por `db:demo`, o crea una cuenta nueva. Una cuenta sin asistencia confirmada muestra cero clases; esto es correcto. Sigue [el recorrido de la interfaz](docs/third-cut/web-pages.md) para probar las pantallas y preparar una asistencia de demostración.

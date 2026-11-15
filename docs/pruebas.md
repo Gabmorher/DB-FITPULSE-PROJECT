@@ -6,26 +6,30 @@ Ejecución del 14 de noviembre de 2026, con **Node.js 22.23.5** y **MySQL 8.4.13
 
 | Verificación | Resultado | Evidencia |
 | --- | --- | --- |
-| Integración HTTP | 120 casos y 279 comprobaciones; sin fallos | `evidence/test-results.json` |
+| Integración HTTP | 123 casos y 299 comprobaciones; sin fallos | `evidence/test-results.json` |
 | Contrato completo | Éxito y error para las 35 operaciones OpenAPI | `summary.coverage` en el mismo archivo |
+| Contraseñas y salt | 4 pruebas aprobadas | `tests/passwords.test.js` y salida de `npm run test:passwords` |
+| Cuentas y migración | 7 casos aprobados | `evidence/credential-tools-results.json` |
 | Compatibilidad del esquema | 5 casos aprobados con cambios reales en una base temporal | `evidence/schema-results.json` |
 | Colección Postman, ejecutada con Newman 6.2.1 | 76 solicitudes y 149 comprobaciones; sin fallos | `evidence/newman-results.json` |
 | Modelo físico | 7 tablas, 49 columnas y 7 FK | `evidence/model-metadata.json` |
-| Catálogo, lote de 50 peticiones concurrentes | p95: 93,290 ms | `summary.catalogLoad` |
-| Historial personal, lote de 50 peticiones concurrentes | p95: 69,284 ms | `summary.personalLoad` |
-| Una consulta de progreso con la muestra de prueba | 1,947 ms; umbral de 10 s superado favorablemente | Caso `Weekly streak and category totals` |
+| Catálogo, lote de 50 peticiones concurrentes | p95: 120,394 ms | `summary.catalogLoad` |
+| Historial personal, lote de 50 peticiones concurrentes | p95: 65,853 ms | `summary.personalLoad` |
+| Una consulta de progreso con la muestra de prueba | 2,227 ms; umbral de 10 s superado favorablemente | Caso `Weekly streak and category totals` |
 
 Los dos lotes usan el mismo token de cliente. Son 50 solicitudes simultáneas, no 50 usuarios diferentes ni una prueba sostenida; por ello no se declara validado RNF-04. La medición de progreso usa un historial pequeño y no permite extrapolar a volúmenes grandes. Las cifras anteriores se deben actualizar desde el JSON si se repite la ejecución.
 
-La suite pasó de 115 casos/274 comprobaciones a 120/279 porque se añadieron cinco rechazos de administración de clases y paquetes con token de cliente. El número de operaciones HTTP permanece en 35. Los indicadores `success: true` y `error: true` significan que se probó correctamente un caso de éxito y uno de rechazo para esa operación.
+La revisión anterior tenía 120 casos/279 comprobaciones. La evolución actual añade migración, hash, salts, rechazo del hash utilizado como contraseña y comprobaciones de servicio de las páginas y su configuración. También conserva los cinco rechazos de administración de clases y paquetes con token de cliente. El número de operaciones HTTP permanece en 35. Los indicadores `success: true` y `error: true` significan que se probó correctamente un caso de éxito y uno de rechazo para esa operación.
 
 ## Repetir en Visual Studio Code
 
 Instala Node.js 22 y MySQL, ejecuta `npm ci` y configura `.env` como indica el README. Usa una base de pruebas vacía, distinta de tu base habitual; por ejemplo, crea en Workbench `fitpulse_project_test`. Configura ese nombre en `TEST_DB_NAME`. La cuenta de pruebas debe poder crear tablas; `test:schema` necesita además crear y eliminar su propia base temporal.
 
 ```sh
+npm run test:passwords
 npm run test:schema
 npm test
+npm run test:credential-tools
 ```
 
 `npm test` añade únicamente datos ficticios a `TEST_DB_NAME`; no borra la base de trabajo. Oculta contraseñas y tokens en el reporte y en `docs/FitPulse.postman_collection.json`. Este último archivo es una captura de integración con respuestas: **no es la colección automatizada de Postman**.
@@ -58,4 +62,7 @@ La verificación guardada se ejecutó con Newman, la herramienta CLI de Postman,
 8. Como administrador, consulta compras y ventas del día (`200`), desactiva una cuenta (`200`) y comprueba que su token existente se rechaza (`403`). Reactívala con el administrador para continuar.
 9. Comprueba `409` al modificar o eliminar un paquete comprado, y al modificar o eliminar una clase con reservas. Para comprobar eliminación de clases usa una clase futura sin reservas, no una clase histórica asistida.
 
-La prueba de concurrencia de `npm test` envía dos reservas de clientes distintos al último cupo: exactamente una debe devolver `201` y la otra `409`, quedando una sola fila. El bloqueo tras cinco intentos erróneos devuelve cuatro veces `401` y luego `423`; la suite verifica el contador, la duración y el desbloqueo. Estos casos respaldan RNF-02 y RNF-03, sin convertirlos en una afirmación de cumplimiento de RNF-01.
+La prueba de concurrencia de `npm test` envía dos reservas de clientes distintos al último cupo: exactamente una debe devolver `201` y la otra `409`, quedando una sola fila. El bloqueo tras cinco intentos erróneos devuelve cuatro veces `401` y luego `423`; la suite verifica el contador, la duración y el desbloqueo. Estos casos respaldan RNF-02 y RNF-03. El almacenamiento de RNF-01 ahora tiene pruebas de Argon2id y migración; cada base existente debe ejecutar esa migración localmente.
+
+
+La revisión de navegador de las dos páginas se detalla en `evidence/web-review.json`. Se usó una sesión sintética preparada por un arnés local externo al repositorio. Registro, login y migración se verificaron mediante las pruebas HTTP y de comandos; no se atribuye al navegador una entrada manual de credenciales que no se realizó.

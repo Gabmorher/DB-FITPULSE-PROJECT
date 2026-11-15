@@ -1,6 +1,6 @@
 {
   "source": "Live MySQL information_schema after database/schema.sql",
-  "executedAt": "2026-11-14T23:47:50.963Z",
+  "executedAt": "2026-11-15T03:09:06.511Z",
   "mysqlVersion": "8.4.13",
   "tables": [
     "packages",

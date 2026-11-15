@@ -1,5 +1,7 @@
 # Entrega de Laura · siete tablas
 
+> Esta matriz conserva el estado de la revisión del segundo corte. La evolución posterior con Argon2id y las dos páginas HTML está implementada y documentada en `docs/third-cut/`; sustituye el estado pendiente de autenticación indicado en esta revisión histórica.
+
 ## Qué se preparó
 
 Los cinco archivos de `docs/informe/secciones/` sustituyen únicamente los bloques asignados a Laura. `docs/informe/main.tex` es un documento independiente de revisión; no reemplaza el informe conjunto ni sus portadas, objetivos, requerimientos, normalización, prototipo, documentación o pruebas.

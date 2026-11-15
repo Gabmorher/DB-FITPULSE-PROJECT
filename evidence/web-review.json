@@ -1,0 +1,103 @@
+{
+  "runner": "Revisión manual con CUA en Chromium, DOM y capturas del navegador",
+  "executedAt": "2026-11-15T03:17:10.090461+00:00",
+  "passed": true,
+  "fixtureNote": "Cuenta y base MySQL sintéticas locales. La sesión de revisión fue preparada por un arnés fuera del repositorio, usando el servicio real de login. El arnés no forma parte del código publicado.",
+  "cases": [
+    {
+      "name": "guest",
+      "observation": "Las páginas muestran acceso y no muestran datos personales sin sesión.",
+      "passed": true
+    },
+    {
+      "name": "progress",
+      "observation": "La cuenta sintética muestra 7 asistencias, una racha de 6 semanas y 3 categorías desde MySQL.",
+      "passed": true
+    },
+    {
+      "name": "period",
+      "observation": "El selector de 4 semanas muestra exactamente cuatro columnas y vuelve a 8 semanas.",
+      "passed": true
+    },
+    {
+      "name": "navigation",
+      "observation": "La navegación entre progreso y marcas conserva la sesión de la pestaña.",
+      "passed": true
+    },
+    {
+      "name": "create",
+      "observation": "Se creó Prueba de interfaz con 70 kg; la lista cambió de 6 a 7 registros.",
+      "passed": true
+    },
+    {
+      "name": "update",
+      "observation": "La misma marca se modificó a 75.5 kg y la lista recargada mostró 75,5 kg.",
+      "passed": true
+    },
+    {
+      "name": "search",
+      "observation": "La búsqueda Prueba de interfaz mostró 1 de 7 registros.",
+      "passed": true
+    },
+    {
+      "name": "delete_cancel",
+      "observation": "Conservar marca cerró la confirmación sin eliminar el registro.",
+      "passed": true
+    },
+    {
+      "name": "delete",
+      "observation": "Confirmar la eliminación retiró la marca y la lista regresó a 6 registros.",
+      "passed": true
+    },
+    {
+      "name": "type_filter",
+      "observation": "El filtro Distancia mostró solo Carrera continua y el contador 1 de 6.",
+      "passed": true
+    },
+    {
+      "name": "validation",
+      "observation": "Un ejercicio de solo espacios fue rechazado por el servidor y el formulario mostró el mensaje en español.",
+      "passed": true
+    },
+    {
+      "name": "loading",
+      "observation": "Se observaron Guardando… y Eliminando… con botones desactivados antes de la confirmación.",
+      "passed": true
+    },
+    {
+      "name": "empty",
+      "observation": "Una cuenta recién creada mostró cero asistencias y cero marcas con mensajes de estado vacío.",
+      "passed": true
+    },
+    {
+      "name": "retry",
+      "observation": "Un 503 controlado del arnés mostró error y Volver a intentar; el reintento recuperó el progreso.",
+      "passed": true
+    },
+    {
+      "name": "expired",
+      "observation": "Un JWT sintético vencido retiró los datos y mostró Tu sesión venció.",
+      "passed": true
+    },
+    {
+      "name": "logout_history",
+      "observation": "Cerrar sesión retiró los datos; volver por el historial no mostró las marcas anteriores.",
+      "passed": true
+    },
+    {
+      "name": "access_dialogs",
+      "observation": "Se revisaron los controles visibles de Iniciar sesión y Crear cuenta sin introducir credenciales en el navegador.",
+      "passed": true
+    },
+    {
+      "name": "visual",
+      "observation": "Se revisaron las dos páginas completas y se corrigió el contraste del botón lima.",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "No se introdujeron credenciales manualmente en el navegador; registro, login y migración se verificaron mediante las pruebas HTTP y de comandos.",
+    "No se verificó un dispositivo móvil físico ni una emulación móvil. El CSS incluye puntos de adaptación.",
+    "Figma rechazó el acceso al archivo; no se certifica correspondencia visual con el prototipo."
+  ]
+}
