@@ -56,7 +56,7 @@
           "Sessions"
         ],
         "summary": "Log in",
-        "description": "Checks the email and password against the users table and returns a JWT access token. Five consecutive failed attempts lock the account for fifteen minutes.",
+        "description": "Verifies the password against the stored Argon2id hash and returns a JWT. Legacy plain-text credentials must be migrated with npm run db:migrate-passwords. Account status and temporary lockout are checked before authentication.",
         "requestBody": {
           "required": true,
           "content": {
@@ -172,7 +172,7 @@
           "Users"
         ],
         "summary": "Register a client",
-        "description": "Creates a client account. The role is always client and the password is stored as plain text in this course stage. The password is never returned.",
+        "description": "Creates a client account. The role is always client. The server stores an Argon2id password hash with an independent random salt; the password and hash are never returned.",
         "requestBody": {
           "required": true,
           "content": {

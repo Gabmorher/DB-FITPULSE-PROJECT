@@ -15,13 +15,17 @@
     "test": "node tests/integration.js",
     "db:demo": "node scripts/seed-demo.js",
     "test:schema": "node tests/schema-compatibility.js",
-    "db:inspect": "node scripts/export-model.js"
+    "db:inspect": "node scripts/export-model.js",
+    "db:migrate-passwords": "node scripts/migrate-passwords.js",
+    "test:passwords": "node --test tests/passwords.test.js",
+    "test:credential-tools": "node tests/credential-tools.js"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.15.3",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "argon2": "^0.44.0"
   }
 }
