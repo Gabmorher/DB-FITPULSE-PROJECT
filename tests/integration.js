@@ -423,6 +423,21 @@ async function run() {
   const docs = await fetch(`${baseUrl}/docs/`);
   verify(docs.status === 200 && (await docs.text()).includes('swagger-ui'),
     'Interactive Swagger must be served');
+  for (const [route, title] of [['/progress.html', 'Mi progreso'],
+    ['/personal-records.html', 'Mis marcas']]) {
+    const page = await fetch(`${baseUrl}${route}`);
+    verify(page.status === 200 && (await page.text()).includes(`${title} · FitPulse`),
+      'The client page must be served by the same application');
+    verify(page.headers.get('content-security-policy').includes("script-src 'self'"),
+      'Client pages must restrict scripts to the application origin');
+  }
+  const clientConfiguration = await (await fetch(`${baseUrl}/app-config.json`)).json();
+  verify(clientConfiguration.apiPrefix === '/api/v1' &&
+    clientConfiguration.timeZone === 'America/Bogota' &&
+    Object.keys(clientConfiguration).length === 2,
+  'Browser configuration must contain only the API prefix and business time zone');
+  const privateFile = await fetch(`${baseUrl}/.env`);
+  verify(privateFile.status === 404, 'Environment files must not be served');
   const coverage = [];
   for (const [route, methods] of Object.entries(spec.paths)) {
     const pattern = new RegExp(`^${route.replace(/\{\w+\}/g, '[0-9]+')}$`);

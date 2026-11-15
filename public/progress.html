@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mira tu constancia, descubre qué actividades practicas y sigue avanzando a tu ritmo."
+    />
+    <meta name="theme-color" content="#173e35" />
+    <title>Mi progreso · FitPulse</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/css/app.css" />
+    <script type="module" src="/js/progress.js"></script>
+  </head>
+  <body data-page="progress">
+    <a class="skip-link" href="#main-content">Ir al contenido</a>
+    <aside class="sidebar" id="sidebar" aria-label="Mi cuenta"></aside>
+    <main id="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span>Mi espacio</span
+          ><span class="separator" aria-hidden="true">/</span
+          ><strong>Mi progreso</strong>
+        </div>
+        <div class="topbar-right">
+          <span class="today"
+            ><span data-icon="calendar"></span
+            ><time id="today-label"></time></span
+          ><button class="button button-small" type="button" data-sign-in>
+            Iniciar sesión
+          </button>
+        </div>
+      </header>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <span class="eyebrow">CADA ASISTENCIA CUENTA</span>
+          <h1 id="page-title">Tu progreso,<br /><span>paso a paso.</span></h1>
+          <p>
+            Mira tu constancia, descubre qué actividades practicas y sigue
+            avanzando a tu ritmo.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button class="button" id="refresh-button" type="button">
+            <span data-icon="refresh"></span><span>Actualizar</span>
+          </button>
+        </div>
+      </section>
+      <div
+        id="page-status"
+        class="notice"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+      <button
+        class="button button-small retry"
+        id="retry-button"
+        type="button"
+        hidden
+      >
+        Volver a intentar
+      </button>
+      <section
+        class="guest-state"
+        id="guest-state"
+        aria-labelledby="guest-title"
+      >
+        <span class="guest-icon" data-icon="chart"></span>
+        <h2 id="guest-title">Tu progreso tiene su propio espacio.</h2>
+        <p>
+          Inicia sesión o crea tu cuenta para consultar tus clases asistidas y
+          registrar tus marcas personales.
+        </p>
+        <button class="button button-primary" type="button" data-sign-in>
+          Entrar a mi espacio <span data-icon="arrow"></span>
+        </button>
+      </section>
+      <div id="page-data" hidden>
+        <section class="stats-grid" aria-label="Resumen de progreso">
+          <article class="stat">
+            <span class="stat-label">Clases asistidas</span
+            ><span class="stat-symbol" data-icon="check"></span
+            ><strong class="stat-value" id="total-attended">—</strong
+            ><span class="stat-detail">Con asistencia confirmada</span>
+          </article>
+          <article class="stat">
+            <span class="stat-label">Tu racha actual</span
+            ><span class="stat-symbol" data-icon="pulse"></span
+            ><strong class="stat-value" id="weekly-streak">—</strong
+            ><span class="stat-detail">Semanas consecutivas</span>
+          </article>
+          <article class="stat">
+            <span class="stat-label">Categorías practicadas</span
+            ><span class="stat-symbol" data-icon="record"></span
+            ><strong class="stat-value" id="category-count">—</strong
+            ><span class="stat-detail">Variedad en tu entrenamiento</span>
+          </article>
+        </section>
+        <div class="content-grid">
+          <section class="panel" aria-labelledby="activity-heading">
+            <div class="panel-header">
+              <div>
+                <h2 id="activity-heading">Tu constancia, semana a semana</h2>
+                <p class="panel-subtitle">Clases con asistencia confirmada</p>
+              </div>
+              <label class="visually-hidden" for="weeks-filter"
+                >Semanas del gráfico</label
+              ><select id="weeks-filter">
+                <option value="8">Últimas 8 semanas</option>
+                <option value="4">Últimas 4 semanas</option>
+                <option value="12">Últimas 12 semanas</option>
+              </select>
+            </div>
+            <div id="activity-chart"></div>
+            <div class="chart-legend">
+              <span class="legend-dot"></span
+              ><span>Cada semana comienza el lunes</span>
+            </div>
+          </section>
+          <section class="panel" aria-labelledby="category-heading">
+            <div class="panel-header">
+              <div>
+                <h2 id="category-heading">Encuentra tu equilibrio</h2>
+                <p class="panel-subtitle">Tus asistencias por categoría</p>
+              </div>
+            </div>
+            <div id="category-list" class="category-list"></div>
+            <p class="panel-footer">
+              Cada tipo de clase suma a tu recorrido. Aquí ves las actividades
+              que has practicado.
+            </p>
+          </section>
+        </div>
+        <div class="bottom-grid">
+          <section class="panel" aria-labelledby="history-heading">
+            <div class="panel-header">
+              <div>
+                <h2 id="history-heading">Tus últimas clases</h2>
+                <p class="panel-subtitle">
+                  Las cinco asistencias más recientes
+                </p>
+              </div>
+              <span class="badge">Historial personal</span>
+            </div>
+            <div id="attended-list" class="history-list"></div>
+          </section>
+          <section class="panel" aria-labelledby="upcoming-heading">
+            <div class="panel-header">
+              <div>
+                <h2 id="upcoming-heading">Lo que viene</h2>
+                <p class="panel-subtitle">Tus próximas clases reservadas</p>
+              </div>
+            </div>
+            <div id="upcoming-list" class="history-list"></div>
+          </section>
+        </div>
+        <section class="callout">
+          <div>
+            <h2>Tu avance también se mide en pequeños logros.</h2>
+            <p>
+              Guarda tus marcas de fuerza, distancia o tiempo y consulta tu
+              evolución.
+            </p>
+          </div>
+          <a class="button button-lime" href="/personal-records.html"
+            >Ver mis marcas <span data-icon="arrow"></span
+          ></a>
+        </section>
+      </div>
+      <footer class="footer">
+        <span>FitPulse · Tu entrenamiento, con propósito.</span
+        ><span>Progreso a tu ritmo.</span>
+      </footer>
+    </main>
+    <dialog id="auth-dialog" aria-labelledby="auth-heading"></dialog>
+  </body>
+</html>
