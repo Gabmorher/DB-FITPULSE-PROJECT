@@ -11,22 +11,14 @@ import {
 } from "./ui.js";
 import { icon } from "./icons.js";
 import { initializePage } from "./shell.js";
+import { typeLabels, typeLabel } from "./record-types.js";
 
-const typeLabels = {
-  maximum_weight: "Peso máximo",
-  distance: "Distancia",
-  duration: "Tiempo",
-  repetitions: "Repeticiones",
-};
 let records = [];
 let activeLoad;
 let editingId = null;
 let deletingId = null;
 let saving = false;
 
-function typeLabel(value) {
-  return typeLabels[value] || value;
-}
 function groupKey(item) {
   return JSON.stringify([item.exercise, item.record_type, item.unit]);
 }
@@ -43,10 +35,10 @@ function mountDialogs() {
       <div class="form-grid"><label>Resultado<input name="value" type="number" min="0.001" max="999999999.999" step="0.001" required inputmode="decimal" placeholder="0"></label><label>Unidad<input name="unit" maxlength="45" required placeholder="kg" list="record-units"><datalist id="record-units"><option value="kg"><option value="lb"><option value="km"><option value="m"><option value="min"><option value="s"><option value="repeticiones"></datalist></label></div>
       <label>Fecha de la marca<input name="achievedOn" type="date" required></label>
       <p class="form-error" id="record-error" role="alert" hidden></p>
-      <div class="dialog-buttons"><button class="button" type="button" data-cancel>Cancelar</button><button class="button button-primary" id="save-record-button" type="submit">Guardar marca</button></div>
+      <div class="dialog-buttons"><button class="button button-secondary" type="button" data-cancel>Cancelar</button><button class="button button-primary" id="save-record-button" type="submit">Guardar marca</button></div>
     </form>`;
   document.querySelector("#delete-dialog").innerHTML = `
-    <form id="delete-form" class="dialog-form"><span class="eyebrow">REVISA ANTES DE CONTINUAR</span><h2 id="delete-heading">¿Eliminar esta marca?</h2><p class="delete-description">Se eliminará el registro de <strong id="delete-exercise"></strong>. Esta acción no se puede deshacer.</p><p class="form-error" id="delete-error" role="alert" hidden></p><div class="dialog-buttons"><button class="button" type="button" data-cancel>Conservar marca</button><button class="button button-danger" id="confirm-delete-button" type="submit">Eliminar marca</button></div></form>`;
+    <form id="delete-form" class="dialog-form"><span class="eyebrow">REVISA ANTES DE CONTINUAR</span><h2 id="delete-heading">¿Eliminar esta marca?</h2><p class="delete-description">Se eliminará el registro de <strong id="delete-exercise"></strong>. Esta acción no se puede deshacer.</p><p class="form-error" id="delete-error" role="alert" hidden></p><div class="dialog-buttons"><button class="button button-secondary" type="button" data-cancel>Conservar marca</button><button class="button button-danger" id="confirm-delete-button" type="submit">Eliminar marca</button></div></form>`;
   const dialog = document.querySelector("#record-dialog");
   for (const selector of ["[data-close]", "[data-cancel]"])
     dialog

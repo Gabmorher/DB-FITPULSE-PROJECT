@@ -1,7 +1,7 @@
 export const loginPage = "/login.html";
 
 const homePages = {
-  client: "/progress.html",
+  client: "/home.html",
   admin: "/admin-sales.html",
 };
 

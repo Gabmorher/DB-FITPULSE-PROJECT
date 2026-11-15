@@ -62,7 +62,11 @@ const textFieldPattern =
   /^(\w+) must be nonempty text of at most (\d+) characters$/;
 const integerFieldPattern = /^capacity must be an integer between (\d+) and/;
 
+const unexpectedError =
+  "Ocurrió un problema al mostrar la información. Recarga la página e inténtalo de nuevo.";
+
 export function errorMessage(error) {
+  if (error instanceof TypeError) return unexpectedError;
   const textField = textFieldPattern.exec(error.message);
   if (textField && fieldLabels[textField[1]])
     return `${fieldLabels[textField[1]]} no puede quedar vacío ni superar ${textField[2]} caracteres.`;

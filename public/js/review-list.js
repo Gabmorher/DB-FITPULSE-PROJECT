@@ -13,7 +13,7 @@ export function avatar(name, colorIndex) {
   return circle;
 }
 
-export function starIcons(rating) {
+function starIcons(rating) {
   const stars = element("span", "stars");
   stars.setAttribute("role", "img");
   stars.setAttribute("aria-label", `${rating} de ${maximumRating} estrellas`);
@@ -34,14 +34,15 @@ function extraDetails(review) {
 }
 
 export function reviewCard(review) {
+  const authorName = review.author_name || "Cliente";
   const card = element("article", "review-card");
   const author = element("div", "review-author");
   const identity = element("div");
   identity.append(
-    element("strong", "", review.author_name),
+    element("strong", "", authorName),
     element("span", "", daysAgo(review.created_at)),
   );
-  author.append(avatar(review.author_name, review.user_id), identity);
+  author.append(avatar(authorName, review.user_id), identity);
   const meta = element("div", "review-meta");
   meta.append(
     starIcons(review.rating),
