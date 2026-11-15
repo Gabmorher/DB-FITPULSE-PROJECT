@@ -33,7 +33,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"legacy1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"legacy1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -56,7 +56,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"legacy1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"legacy1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -91,7 +91,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"legacy1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"legacy1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -114,7 +114,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"legacy1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"legacy1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -130,7 +130,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 13,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 22,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -149,7 +149,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"admin1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"admin1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -172,7 +172,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"admin1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"admin1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -188,7 +188,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 12,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794712142914@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 21,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794714334076@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -207,7 +207,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"admin1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"admin1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -230,7 +230,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"admin1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"admin1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -265,7 +265,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Demo Client\",\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"name\": \"Demo Client\",\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -288,7 +288,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Demo Client\",\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"name\": \"Demo Client\",\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -304,7 +304,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794712142914@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 23,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794714334076@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -381,7 +381,7 @@
         "description": "Recorded expected status: 400",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"email\": \"long1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"name\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"email\": \"long1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -404,7 +404,7 @@
             "description": "Recorded expected status: 400",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"email\": \"long1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"name\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"email\": \"long1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -439,7 +439,7 @@
         "description": "Recorded expected status: 409",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Demo\",\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"name\": \"Demo\",\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -462,7 +462,7 @@
             "description": "Recorded expected status: 409",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Demo\",\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"name\": \"Demo\",\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -555,7 +555,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -578,7 +578,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -594,7 +594,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 14,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 23,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -613,7 +613,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -636,7 +636,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"client1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"client1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -712,7 +712,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794711436052@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Local Test Admin\",\n      \"email\": \"admin@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:17\"\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Local Test Client\",\n      \"email\": \"client@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:18\"\n    },\n    {\n      \"id\": 10,\n      \"name\": \"Postman Client\",\n      \"email\": \"client1794711440771@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"inactive\",\n      \"registered_at\": \"2026-11-15 02:57:20\"\n    },\n    {\n      \"id\": 12,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794712142914@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 13,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 14,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794711436052@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794711436052@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:16\"\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Local Test Admin\",\n      \"email\": \"admin@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:17\"\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Local Test Client\",\n      \"email\": \"client@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 02:57:18\"\n    },\n    {\n      \"id\": 10,\n      \"name\": \"Postman Client\",\n      \"email\": \"client1794711440771@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"inactive\",\n      \"registered_at\": \"2026-11-15 02:57:20\"\n    },\n    {\n      \"id\": 12,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794712142914@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 13,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 14,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 16,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    },\n    {\n      \"id\": 19,\n      \"name\": \"Postman Client\",\n      \"email\": \"client1794712146816@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"inactive\",\n      \"registered_at\": \"2026-11-15 03:09:06\"\n    },\n    {\n      \"id\": 21,\n      \"name\": \"Demo Admin\",\n      \"email\": \"admin1794714334076@fitpulse.example\",\n      \"role\": \"admin\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    },\n    {\n      \"id\": 22,\n      \"name\": \"Legacy Client\",\n      \"email\": \"legacy1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    },\n    {\n      \"id\": 23,\n      \"name\": \"Demo Client\",\n      \"email\": \"client1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -781,7 +781,7 @@
       "name": "014 - Own profile",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14",
+        "url": "{{baseUrl}}/api/v1/users/23",
         "header": [
           {
             "key": "Content-Type",
@@ -805,7 +805,7 @@
           "name": "Own profile",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14",
+            "url": "{{baseUrl}}/api/v1/users/23",
             "header": [
               {
                 "key": "Content-Type",
@@ -832,7 +832,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794712142914@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 23,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794714334076@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -901,7 +901,7 @@
       "name": "016 - Deactivate client",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/users/14/status",
+        "url": "{{baseUrl}}/api/v1/users/23/status",
         "header": [
           {
             "key": "Content-Type",
@@ -934,7 +934,7 @@
           "name": "Deactivate client",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/users/14/status",
+            "url": "{{baseUrl}}/api/v1/users/23/status",
             "header": [
               {
                 "key": "Content-Type",
@@ -970,7 +970,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794712142914@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"inactive\",\n    \"registered_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 23,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794714334076@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"inactive\",\n    \"registered_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1039,7 +1039,7 @@
       "name": "018 - Client cannot reactivate itself",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/users/14/status",
+        "url": "{{baseUrl}}/api/v1/users/23/status",
         "header": [
           {
             "key": "Content-Type",
@@ -1072,7 +1072,7 @@
           "name": "Client cannot reactivate itself",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/users/14/status",
+            "url": "{{baseUrl}}/api/v1/users/23/status",
             "header": [
               {
                 "key": "Content-Type",
@@ -1117,7 +1117,7 @@
       "name": "019 - Reactivate client",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/users/14/status",
+        "url": "{{baseUrl}}/api/v1/users/23/status",
         "header": [
           {
             "key": "Content-Type",
@@ -1150,7 +1150,7 @@
           "name": "Reactivate client",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/users/14/status",
+            "url": "{{baseUrl}}/api/v1/users/23/status",
             "header": [
               {
                 "key": "Content-Type",
@@ -1186,7 +1186,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794712142914@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 23,\n    \"name\": \"Demo Client\",\n    \"email\": \"client1794714334076@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1215,7 +1215,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Future Yoga\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.488Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.488Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Future Yoga\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.593Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.593Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -1248,7 +1248,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Future Yoga\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.488Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.488Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Future Yoga\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.593Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.593Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1264,7 +1264,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 16,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1293,7 +1293,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Forbidden\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.494Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.494Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Forbidden\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.600Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.600Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -1326,7 +1326,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Forbidden\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.494Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.494Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Forbidden\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.600Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.600Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1371,7 +1371,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Invalid\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.496Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.496Z\",\n  \"capacity\": \"3\",\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Invalid\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.602Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.602Z\",\n  \"capacity\": \"3\",\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -1404,7 +1404,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Invalid\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.496Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.496Z\",\n  \"capacity\": \"3\",\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Invalid\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.602Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.602Z\",\n  \"capacity\": \"3\",\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1449,7 +1449,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Long instructor\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"startsAt\": \"2026-11-17T03:09:03.499Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.499Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Long instructor\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"startsAt\": \"2026-11-17T03:45:34.604Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.604Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -1482,7 +1482,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Long instructor\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"startsAt\": \"2026-11-17T03:09:03.499Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.499Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Long instructor\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"startsAt\": \"2026-11-17T03:45:34.604Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.604Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1527,7 +1527,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Invalid time\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2030-01-01T24:00:00Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.501Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Invalid time\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2030-01-01T24:00:00Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.606Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -1560,7 +1560,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Invalid time\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2030-01-01T24:00:00Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.501Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Invalid time\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2030-01-01T24:00:00Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.606Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1636,7 +1636,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 4,\n      \"name\": \"Past Yoga 1794711436052\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-01 02:57:17\",\n      \"ends_at\": \"2026-11-01 03:57:17\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Past Yoga 1794711436052\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-08 02:57:17\",\n      \"ends_at\": \"2026-11-08 03:57:17\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Past Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-08 02:57:18\",\n      \"ends_at\": \"2026-11-08 03:57:18\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Finished demo class\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 1,\n      \"name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:16\",\n      \"ends_at\": \"2026-11-17 03:57:16\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Last Spot\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:17\",\n      \"ends_at\": \"2026-11-17 03:57:17\",\n      \"capacity\": 1,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 0\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Postman Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:21\",\n      \"ends_at\": \"2026-11-17 03:57:21\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Class created from Postman\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 9,\n      \"name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 03:09:03\",\n      \"ends_at\": \"2026-11-17 04:09:03\",\n      \"capacity\": 3,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 3\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 4,\n      \"name\": \"Past Yoga 1794711436052\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-01 02:57:17\",\n      \"ends_at\": \"2026-11-01 03:57:17\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 12,\n      \"name\": \"Past Yoga 1794712142914\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-01 03:09:04\",\n      \"ends_at\": \"2026-11-01 04:09:04\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Past Yoga 1794711436052\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-08 02:57:17\",\n      \"ends_at\": \"2026-11-08 03:57:17\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 6,\n      \"name\": \"Past Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-08 02:57:18\",\n      \"ends_at\": \"2026-11-08 03:57:18\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Finished demo class\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 11,\n      \"name\": \"Past Yoga 1794712142914\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-08 03:09:04\",\n      \"ends_at\": \"2026-11-08 04:09:04\",\n      \"capacity\": 20,\n      \"price\": \"25000.00\",\n      \"description\": \"Past fixture\",\n      \"available_spots\": 19\n    },\n    {\n      \"id\": 1,\n      \"name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:16\",\n      \"ends_at\": \"2026-11-17 03:57:16\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Last Spot\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:17\",\n      \"ends_at\": \"2026-11-17 03:57:17\",\n      \"capacity\": 1,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 0\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Postman Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 02:57:21\",\n      \"ends_at\": \"2026-11-17 03:57:21\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Class created from Postman\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 9,\n      \"name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 03:09:03\",\n      \"ends_at\": \"2026-11-17 04:09:03\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 13,\n      \"name\": \"Last Spot\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 03:09:03\",\n      \"ends_at\": \"2026-11-17 04:09:03\",\n      \"capacity\": 1,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 0\n    },\n    {\n      \"id\": 14,\n      \"name\": \"Postman Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 03:09:07\",\n      \"ends_at\": \"2026-11-17 04:09:07\",\n      \"capacity\": 4,\n      \"price\": \"25000.00\",\n      \"description\": \"Class created from Postman\",\n      \"available_spots\": 3\n    },\n    {\n      \"id\": 16,\n      \"name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"instructor_name\": \"Demo Coach\",\n      \"starts_at\": \"2026-11-17 03:45:34\",\n      \"ends_at\": \"2026-11-17 04:45:34\",\n      \"capacity\": 3,\n      \"price\": \"25000.00\",\n      \"description\": \"Mobility and breathing\",\n      \"available_spots\": 3\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1705,7 +1705,7 @@
       "name": "027 - Class details",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -1729,7 +1729,7 @@
           "name": "Class details",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -1756,7 +1756,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 16,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1825,7 +1825,7 @@
       "name": "029 - Update class",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -1858,7 +1858,7 @@
           "name": "Update class",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -1894,7 +1894,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\",\n    \"capacity\": 4,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 4\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 16,\n    \"name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\",\n    \"capacity\": 4,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 4\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -1903,7 +1903,7 @@
       "name": "030 - Invalid class update",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -1936,7 +1936,7 @@
           "name": "Invalid class update",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -2001,7 +2001,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Disposable\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.524Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.524Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Disposable\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.627Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.627Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -2034,7 +2034,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Disposable\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.524Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.524Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Disposable\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:34.627Z\",\n  \"endsAt\": \"2026-11-17T04:45:34.627Z\",\n  \"capacity\": 3,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2050,7 +2050,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 10,\n    \"name\": \"Disposable\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 17,\n    \"name\": \"Disposable\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\",\n    \"capacity\": 3,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 3\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -2059,7 +2059,7 @@
       "name": "032 - Delete class",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/classes/10",
+        "url": "{{baseUrl}}/api/v1/classes/17",
         "header": [
           {
             "key": "Content-Type",
@@ -2083,7 +2083,7 @@
           "name": "Delete class",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/classes/10",
+            "url": "{{baseUrl}}/api/v1/classes/17",
             "header": [
               {
                 "key": "Content-Type",
@@ -2119,7 +2119,7 @@
       "name": "033 - Delete missing class",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/classes/10",
+        "url": "{{baseUrl}}/api/v1/classes/17",
         "header": [
           {
             "key": "Content-Type",
@@ -2143,7 +2143,7 @@
           "name": "Delete missing class",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/classes/10",
+            "url": "{{baseUrl}}/api/v1/classes/17",
             "header": [
               {
                 "key": "Content-Type",
@@ -2248,7 +2248,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"120000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"120000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -2464,7 +2464,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Five classes\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Postman Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Package created from Postman\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"120000.00\",\n      \"description\": \"Five classes\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Five classes\"\n    },\n    {\n      \"id\": 3,\n      \"name\": \"Postman Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Package created from Postman\"\n    },\n    {\n      \"id\": 5,\n      \"name\": \"Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Five classes\"\n    },\n    {\n      \"id\": 7,\n      \"name\": \"Postman Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"125000.00\",\n      \"description\": \"Package created from Postman\"\n    },\n    {\n      \"id\": 9,\n      \"name\": \"Starter\",\n      \"class_quantity\": 5,\n      \"price\": \"120000.00\",\n      \"description\": \"Five classes\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -2533,7 +2533,7 @@
       "name": "039 - Package details",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -2557,7 +2557,7 @@
           "name": "Package details",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -2584,7 +2584,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"120000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"120000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -2671,7 +2671,7 @@
       "name": "041 - Client cannot update package",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -2704,7 +2704,7 @@
           "name": "Client cannot update package",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -2749,7 +2749,7 @@
       "name": "042 - Client cannot delete package",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -2773,7 +2773,7 @@
           "name": "Client cannot delete package",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -2809,7 +2809,7 @@
       "name": "043 - Client cannot update class",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -2842,7 +2842,7 @@
           "name": "Client cannot update class",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -2887,7 +2887,7 @@
       "name": "044 - Client cannot delete class",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -2911,7 +2911,7 @@
           "name": "Client cannot delete class",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -3007,7 +3007,7 @@
       "name": "046 - Update package",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -3040,7 +3040,7 @@
           "name": "Update package",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -3076,7 +3076,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"125000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"name\": \"Starter\",\n    \"class_quantity\": 5,\n    \"price\": \"125000.00\",\n    \"description\": \"Five classes\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3085,7 +3085,7 @@
       "name": "047 - Invalid package price",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -3118,7 +3118,7 @@
           "name": "Invalid package price",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -3232,7 +3232,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 6,\n    \"name\": \"Disposable\",\n    \"class_quantity\": 1,\n    \"price\": \"1.00\",\n    \"description\": \"Test fixture\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 10,\n    \"name\": \"Disposable\",\n    \"class_quantity\": 1,\n    \"price\": \"1.00\",\n    \"description\": \"Test fixture\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3241,7 +3241,7 @@
       "name": "049 - Delete package",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/packages/6",
+        "url": "{{baseUrl}}/api/v1/packages/10",
         "header": [
           {
             "key": "Content-Type",
@@ -3265,7 +3265,7 @@
           "name": "Delete package",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/packages/6",
+            "url": "{{baseUrl}}/api/v1/packages/10",
             "header": [
               {
                 "key": "Content-Type",
@@ -3301,7 +3301,7 @@
       "name": "050 - Delete missing package",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/packages/6",
+        "url": "{{baseUrl}}/api/v1/packages/10",
         "header": [
           {
             "key": "Content-Type",
@@ -3325,7 +3325,7 @@
           "name": "Delete missing package",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/packages/6",
+            "url": "{{baseUrl}}/api/v1/packages/10",
             "header": [
               {
                 "key": "Content-Type",
@@ -3381,7 +3381,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"packageId\": 5\n}",
+          "raw": "{\n  \"packageId\": 9\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -3414,7 +3414,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"packageId\": 5\n}",
+              "raw": "{\n  \"packageId\": 9\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -3430,7 +3430,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"user_id\": 14,\n    \"package_id\": 5,\n    \"purchased_at\": \"2026-11-15 03:09:03\",\n    \"paid_price\": \"125000.00\",\n    \"buyer_name\": \"Demo Client\",\n    \"buyer_email\": \"client1794712142914@fitpulse.example\",\n    \"package_name\": \"Starter\",\n    \"class_quantity\": 5\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"user_id\": 23,\n    \"package_id\": 9,\n    \"purchased_at\": \"2026-11-15 03:45:34\",\n    \"paid_price\": \"125000.00\",\n    \"buyer_name\": \"Demo Client\",\n    \"buyer_email\": \"client1794714334076@fitpulse.example\",\n    \"package_name\": \"Starter\",\n    \"class_quantity\": 5\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3459,7 +3459,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"packageId\": 5,\n  \"paidPrice\": 1\n}",
+          "raw": "{\n  \"packageId\": 9,\n  \"paidPrice\": 1\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -3492,7 +3492,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"packageId\": 5,\n  \"paidPrice\": 1\n}",
+              "raw": "{\n  \"packageId\": 9,\n  \"paidPrice\": 1\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -3568,7 +3568,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 5,\n      \"user_id\": 14,\n      \"package_id\": 5,\n      \"purchased_at\": \"2026-11-15 03:09:03\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794712142914@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 4,\n      \"user_id\": 7,\n      \"package_id\": 3,\n      \"purchased_at\": \"2026-11-15 02:57:21\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Local Test Client\",\n      \"buyer_email\": \"client@fitpulse.example\",\n      \"package_name\": \"Postman Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 1,\n      \"user_id\": 3,\n      \"package_id\": 1,\n      \"purchased_at\": \"2026-11-15 02:57:16\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794711436052@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"user_id\": 23,\n      \"package_id\": 9,\n      \"purchased_at\": \"2026-11-15 03:45:34\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794714334076@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 8,\n      \"user_id\": 7,\n      \"package_id\": 7,\n      \"purchased_at\": \"2026-11-15 03:09:07\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Local Test Client\",\n      \"buyer_email\": \"client@fitpulse.example\",\n      \"package_name\": \"Postman Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 5,\n      \"user_id\": 14,\n      \"package_id\": 5,\n      \"purchased_at\": \"2026-11-15 03:09:03\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794712142914@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 4,\n      \"user_id\": 7,\n      \"package_id\": 3,\n      \"purchased_at\": \"2026-11-15 02:57:21\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Local Test Client\",\n      \"buyer_email\": \"client@fitpulse.example\",\n      \"package_name\": \"Postman Starter\",\n      \"class_quantity\": 5\n    },\n    {\n      \"id\": 1,\n      \"user_id\": 3,\n      \"package_id\": 1,\n      \"purchased_at\": \"2026-11-15 02:57:16\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794711436052@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3637,7 +3637,7 @@
       "name": "055 - Own purchase",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/purchases/5",
+        "url": "{{baseUrl}}/api/v1/purchases/9",
         "header": [
           {
             "key": "Content-Type",
@@ -3661,7 +3661,7 @@
           "name": "Own purchase",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/purchases/5",
+            "url": "{{baseUrl}}/api/v1/purchases/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -3688,7 +3688,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"user_id\": 14,\n    \"package_id\": 5,\n    \"purchased_at\": \"2026-11-15 03:09:03\",\n    \"paid_price\": \"125000.00\",\n    \"buyer_name\": \"Demo Client\",\n    \"buyer_email\": \"client1794712142914@fitpulse.example\",\n    \"package_name\": \"Starter\",\n    \"class_quantity\": 5\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"user_id\": 23,\n    \"package_id\": 9,\n    \"purchased_at\": \"2026-11-15 03:45:34\",\n    \"paid_price\": \"125000.00\",\n    \"buyer_name\": \"Demo Client\",\n    \"buyer_email\": \"client1794714334076@fitpulse.example\",\n    \"package_name\": \"Starter\",\n    \"class_quantity\": 5\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3757,7 +3757,7 @@
       "name": "057 - Own purchases",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/purchases",
+        "url": "{{baseUrl}}/api/v1/users/23/purchases",
         "header": [
           {
             "key": "Content-Type",
@@ -3781,7 +3781,7 @@
           "name": "Own purchases",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/purchases",
+            "url": "{{baseUrl}}/api/v1/users/23/purchases",
             "header": [
               {
                 "key": "Content-Type",
@@ -3808,7 +3808,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 5,\n      \"user_id\": 14,\n      \"package_id\": 5,\n      \"purchased_at\": \"2026-11-15 03:09:03\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794712142914@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"user_id\": 23,\n      \"package_id\": 9,\n      \"purchased_at\": \"2026-11-15 03:45:34\",\n      \"paid_price\": \"125000.00\",\n      \"buyer_name\": \"Demo Client\",\n      \"buyer_email\": \"client1794714334076@fitpulse.example\",\n      \"package_name\": \"Starter\",\n      \"class_quantity\": 5\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -3817,7 +3817,7 @@
       "name": "058 - Different user purchases rejected",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/12/purchases",
+        "url": "{{baseUrl}}/api/v1/users/21/purchases",
         "header": [
           {
             "key": "Content-Type",
@@ -3841,7 +3841,7 @@
           "name": "Different user purchases rejected",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/12/purchases",
+            "url": "{{baseUrl}}/api/v1/users/21/purchases",
             "header": [
               {
                 "key": "Content-Type",
@@ -3877,7 +3877,7 @@
       "name": "059 - Purchased package history protected",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/packages/5",
+        "url": "{{baseUrl}}/api/v1/packages/9",
         "header": [
           {
             "key": "Content-Type",
@@ -3910,7 +3910,7 @@
           "name": "Purchased package history protected",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/packages/5",
+            "url": "{{baseUrl}}/api/v1/packages/9",
             "header": [
               {
                 "key": "Content-Type",
@@ -3975,7 +3975,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 9\n}",
+          "raw": "{\n  \"classId\": 16\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4008,7 +4008,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 9\n}",
+              "raw": "{\n  \"classId\": 16\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4024,7 +4024,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 8,\n    \"user_id\": 14,\n    \"class_id\": 9,\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"user_id\": 23,\n    \"class_id\": 16,\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4053,7 +4053,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 9\n}",
+          "raw": "{\n  \"classId\": 16\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4086,7 +4086,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 9\n}",
+              "raw": "{\n  \"classId\": 16\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4111,7 +4111,7 @@
       "name": "062 - Reservation details",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/reservations/8",
+        "url": "{{baseUrl}}/api/v1/reservations/14",
         "header": [
           {
             "key": "Content-Type",
@@ -4135,7 +4135,7 @@
           "name": "Reservation details",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/reservations/8",
+            "url": "{{baseUrl}}/api/v1/reservations/14",
             "header": [
               {
                 "key": "Content-Type",
@@ -4162,7 +4162,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 8,\n    \"user_id\": 14,\n    \"class_id\": 9,\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 14,\n    \"user_id\": 23,\n    \"class_id\": 16,\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Future Yoga\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:45:34\",\n    \"ends_at\": \"2026-11-17 04:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4231,7 +4231,7 @@
       "name": "064 - Reserved classes",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/reservations?status=reserved",
+        "url": "{{baseUrl}}/api/v1/users/23/reservations?status=reserved",
         "header": [
           {
             "key": "Content-Type",
@@ -4255,7 +4255,7 @@
           "name": "Reserved classes",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/reservations?status=reserved",
+            "url": "{{baseUrl}}/api/v1/users/23/reservations?status=reserved",
             "header": [
               {
                 "key": "Content-Type",
@@ -4282,7 +4282,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 8,\n      \"user_id\": 14,\n      \"class_id\": 9,\n      \"created_at\": \"2026-11-15 03:09:03\",\n      \"status\": \"reserved\",\n      \"class_name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"starts_at\": \"2026-11-17 03:09:03\",\n      \"ends_at\": \"2026-11-17 04:09:03\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 14,\n      \"user_id\": 23,\n      \"class_id\": 16,\n      \"created_at\": \"2026-11-15 03:45:34\",\n      \"status\": \"reserved\",\n      \"class_name\": \"Future Yoga\",\n      \"category\": \"yoga\",\n      \"starts_at\": \"2026-11-17 03:45:34\",\n      \"ends_at\": \"2026-11-17 04:45:34\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4291,7 +4291,7 @@
       "name": "065 - Invalid reservation filter",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/reservations?status=wrong",
+        "url": "{{baseUrl}}/api/v1/users/23/reservations?status=wrong",
         "header": [
           {
             "key": "Content-Type",
@@ -4315,7 +4315,7 @@
           "name": "Invalid reservation filter",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/reservations?status=wrong",
+            "url": "{{baseUrl}}/api/v1/users/23/reservations?status=wrong",
             "header": [
               {
                 "key": "Content-Type",
@@ -4351,7 +4351,7 @@
       "name": "066 - Reserved class history protected",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/classes/9",
+        "url": "{{baseUrl}}/api/v1/classes/16",
         "header": [
           {
             "key": "Content-Type",
@@ -4384,7 +4384,7 @@
           "name": "Reserved class history protected",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/classes/9",
+            "url": "{{baseUrl}}/api/v1/classes/16",
             "header": [
               {
                 "key": "Content-Type",
@@ -4429,7 +4429,7 @@
       "name": "067 - Future attendance rejected",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reservations/8/attendance",
+        "url": "{{baseUrl}}/api/v1/reservations/14/attendance",
         "header": [
           {
             "key": "Content-Type",
@@ -4462,7 +4462,7 @@
           "name": "Future attendance rejected",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reservations/8/attendance",
+            "url": "{{baseUrl}}/api/v1/reservations/14/attendance",
             "header": [
               {
                 "key": "Content-Type",
@@ -4527,7 +4527,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 9,\n  \"rating\": 5\n}",
+          "raw": "{\n  \"classId\": 16,\n  \"rating\": 5\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4560,7 +4560,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 9,\n  \"rating\": 5\n}",
+              "raw": "{\n  \"classId\": 16,\n  \"rating\": 5\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4605,7 +4605,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 11\n}",
+          "raw": "{\n  \"classId\": 18\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4638,7 +4638,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 11\n}",
+              "raw": "{\n  \"classId\": 18\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4663,7 +4663,7 @@
       "name": "070 - Record attendance",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reservations/9/attendance",
+        "url": "{{baseUrl}}/api/v1/reservations/15/attendance",
         "header": [
           {
             "key": "Content-Type",
@@ -4696,7 +4696,7 @@
           "name": "Record attendance",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reservations/9/attendance",
+            "url": "{{baseUrl}}/api/v1/reservations/15/attendance",
             "header": [
               {
                 "key": "Content-Type",
@@ -4732,7 +4732,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 9,\n    \"user_id\": 14,\n    \"class_id\": 11,\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"status\": \"attended\",\n    \"class_name\": \"Past Yoga 1794712142914\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-08 03:09:04\",\n    \"ends_at\": \"2026-11-08 04:09:04\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 15,\n    \"user_id\": 23,\n    \"class_id\": 18,\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"status\": \"attended\",\n    \"class_name\": \"Past Yoga 1794714334076\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-08 03:45:35\",\n    \"ends_at\": \"2026-11-08 04:45:35\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4741,7 +4741,7 @@
       "name": "071 - Attended classes",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/reservations?status=attended",
+        "url": "{{baseUrl}}/api/v1/users/23/reservations?status=attended",
         "header": [
           {
             "key": "Content-Type",
@@ -4765,7 +4765,7 @@
           "name": "Attended classes",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/reservations?status=attended",
+            "url": "{{baseUrl}}/api/v1/users/23/reservations?status=attended",
             "header": [
               {
                 "key": "Content-Type",
@@ -4792,7 +4792,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 9,\n      \"user_id\": 14,\n      \"class_id\": 11,\n      \"created_at\": \"2026-11-15 03:09:03\",\n      \"status\": \"attended\",\n      \"class_name\": \"Past Yoga 1794712142914\",\n      \"category\": \"yoga\",\n      \"starts_at\": \"2026-11-08 03:09:04\",\n      \"ends_at\": \"2026-11-08 04:09:04\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 15,\n      \"user_id\": 23,\n      \"class_id\": 18,\n      \"created_at\": \"2026-11-15 03:45:34\",\n      \"status\": \"attended\",\n      \"class_name\": \"Past Yoga 1794714334076\",\n      \"category\": \"yoga\",\n      \"starts_at\": \"2026-11-08 03:45:35\",\n      \"ends_at\": \"2026-11-08 04:45:35\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4821,7 +4821,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 11,\n  \"rating\": 5,\n  \"comment\": \"Clear instructions\",\n  \"intensity\": \"moderate\",\n  \"tags\": [\n    \"Friendly\",\n    \"organized\"\n  ]\n}",
+          "raw": "{\n  \"classId\": 18,\n  \"rating\": 5,\n  \"comment\": \"Clear instructions\",\n  \"intensity\": \"moderate\",\n  \"tags\": [\n    \"Friendly\",\n    \"organized\"\n  ]\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4854,7 +4854,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 11,\n  \"rating\": 5,\n  \"comment\": \"Clear instructions\",\n  \"intensity\": \"moderate\",\n  \"tags\": [\n    \"Friendly\",\n    \"organized\"\n  ]\n}",
+              "raw": "{\n  \"classId\": 18,\n  \"rating\": 5,\n  \"comment\": \"Clear instructions\",\n  \"intensity\": \"moderate\",\n  \"tags\": [\n    \"Friendly\",\n    \"organized\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4870,7 +4870,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 6,\n    \"user_id\": 14,\n    \"class_id\": 11,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [\n      \"friendly\",\n      \"organized\"\n    ],\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"updated_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 11,\n    \"user_id\": 23,\n    \"class_id\": 18,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [\n      \"friendly\",\n      \"organized\"\n    ],\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"updated_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -4899,7 +4899,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 11,\n  \"rating\": 5\n}",
+          "raw": "{\n  \"classId\": 18,\n  \"rating\": 5\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -4932,7 +4932,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 11,\n  \"rating\": 5\n}",
+              "raw": "{\n  \"classId\": 18,\n  \"rating\": 5\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4957,7 +4957,7 @@
       "name": "074 - Review details",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -4981,7 +4981,7 @@
           "name": "Review details",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5008,7 +5008,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 6,\n    \"user_id\": 14,\n    \"class_id\": 11,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [\n      \"friendly\",\n      \"organized\"\n    ],\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"updated_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 11,\n    \"user_id\": 23,\n    \"class_id\": 18,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [\n      \"friendly\",\n      \"organized\"\n    ],\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"updated_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5077,7 +5077,7 @@
       "name": "076 - Class reviews",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/classes/11/reviews",
+        "url": "{{baseUrl}}/api/v1/classes/18/reviews",
         "header": [
           {
             "key": "Content-Type",
@@ -5101,7 +5101,7 @@
           "name": "Class reviews",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/classes/11/reviews",
+            "url": "{{baseUrl}}/api/v1/classes/18/reviews",
             "header": [
               {
                 "key": "Content-Type",
@@ -5128,7 +5128,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 6,\n      \"user_id\": 14,\n      \"class_id\": 11,\n      \"rating\": 5,\n      \"comment\": \"Clear instructions\",\n      \"intensity\": \"moderate\",\n      \"tags\": [\n        \"friendly\",\n        \"organized\"\n      ],\n      \"created_at\": \"2026-11-15 03:09:03\",\n      \"updated_at\": \"2026-11-15 03:09:03\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 11,\n      \"user_id\": 23,\n      \"class_id\": 18,\n      \"rating\": 5,\n      \"comment\": \"Clear instructions\",\n      \"intensity\": \"moderate\",\n      \"tags\": [\n        \"friendly\",\n        \"organized\"\n      ],\n      \"created_at\": \"2026-11-15 03:45:34\",\n      \"updated_at\": \"2026-11-15 03:45:34\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5197,7 +5197,7 @@
       "name": "078 - Clear review tags",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -5230,7 +5230,7 @@
           "name": "Clear review tags",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5266,7 +5266,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 6,\n    \"user_id\": 14,\n    \"class_id\": 11,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [],\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"updated_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 11,\n    \"user_id\": 23,\n    \"class_id\": 18,\n    \"rating\": 5,\n    \"comment\": \"Clear instructions\",\n    \"intensity\": \"moderate\",\n    \"tags\": [],\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"updated_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5275,7 +5275,7 @@
       "name": "079 - Duplicate tags rejected",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -5308,7 +5308,7 @@
           "name": "Duplicate tags rejected",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5353,7 +5353,7 @@
       "name": "080 - Reviewed class cannot be replaced",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -5373,7 +5373,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 9\n}",
+          "raw": "{\n  \"classId\": 16\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -5386,7 +5386,7 @@
           "name": "Reviewed class cannot be replaced",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5406,7 +5406,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 9\n}",
+              "raw": "{\n  \"classId\": 16\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -5431,7 +5431,7 @@
       "name": "081 - Delete review",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -5455,7 +5455,7 @@
           "name": "Delete review",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5491,7 +5491,7 @@
       "name": "082 - Deleting a review preserves recorded attendance",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/progress",
+        "url": "{{baseUrl}}/api/v1/users/23/progress",
         "header": [
           {
             "key": "Content-Type",
@@ -5515,7 +5515,7 @@
           "name": "Deleting a review preserves recorded attendance",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/progress",
+            "url": "{{baseUrl}}/api/v1/users/23/progress",
             "header": [
               {
                 "key": "Content-Type",
@@ -5551,7 +5551,7 @@
       "name": "083 - Delete missing review",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/reviews/6",
+        "url": "{{baseUrl}}/api/v1/reviews/11",
         "header": [
           {
             "key": "Content-Type",
@@ -5575,7 +5575,7 @@
           "name": "Delete missing review",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/reviews/6",
+            "url": "{{baseUrl}}/api/v1/reviews/11",
             "header": [
               {
                 "key": "Content-Type",
@@ -5631,7 +5631,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 11,\n  \"rating\": 4\n}",
+          "raw": "{\n  \"classId\": 18,\n  \"rating\": 4\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -5664,7 +5664,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 11,\n  \"rating\": 4\n}",
+              "raw": "{\n  \"classId\": 18,\n  \"rating\": 4\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -5680,7 +5680,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 7,\n    \"user_id\": 14,\n    \"class_id\": 11,\n    \"rating\": 4,\n    \"comment\": null,\n    \"intensity\": null,\n    \"tags\": [],\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"updated_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 12,\n    \"user_id\": 23,\n    \"class_id\": 18,\n    \"rating\": 4,\n    \"comment\": null,\n    \"intensity\": null,\n    \"tags\": [],\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"updated_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5689,7 +5689,7 @@
       "name": "085 - Create personal record",
       "request": {
         "method": "POST",
-        "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+        "url": "{{baseUrl}}/api/v1/users/23/personal-records",
         "header": [
           {
             "key": "Content-Type",
@@ -5722,7 +5722,7 @@
           "name": "Create personal record",
           "originalRequest": {
             "method": "POST",
-            "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+            "url": "{{baseUrl}}/api/v1/users/23/personal-records",
             "header": [
               {
                 "key": "Content-Type",
@@ -5758,7 +5758,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 3,\n    \"user_id\": 14,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"80.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"user_id\": 23,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"80.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5767,7 +5767,7 @@
       "name": "086 - Incomplete personal record",
       "request": {
         "method": "POST",
-        "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+        "url": "{{baseUrl}}/api/v1/users/23/personal-records",
         "header": [
           {
             "key": "Content-Type",
@@ -5800,7 +5800,7 @@
           "name": "Incomplete personal record",
           "originalRequest": {
             "method": "POST",
-            "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+            "url": "{{baseUrl}}/api/v1/users/23/personal-records",
             "header": [
               {
                 "key": "Content-Type",
@@ -5845,7 +5845,7 @@
       "name": "087 - Record type exceeds database length",
       "request": {
         "method": "POST",
-        "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+        "url": "{{baseUrl}}/api/v1/users/23/personal-records",
         "header": [
           {
             "key": "Content-Type",
@@ -5878,7 +5878,7 @@
           "name": "Record type exceeds database length",
           "originalRequest": {
             "method": "POST",
-            "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+            "url": "{{baseUrl}}/api/v1/users/23/personal-records",
             "header": [
               {
                 "key": "Content-Type",
@@ -5923,7 +5923,7 @@
       "name": "088 - Personal records list",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+        "url": "{{baseUrl}}/api/v1/users/23/personal-records",
         "header": [
           {
             "key": "Content-Type",
@@ -5947,7 +5947,7 @@
           "name": "Personal records list",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/personal-records",
+            "url": "{{baseUrl}}/api/v1/users/23/personal-records",
             "header": [
               {
                 "key": "Content-Type",
@@ -5974,7 +5974,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": [\n    {\n      \"id\": 3,\n      \"user_id\": 14,\n      \"exercise\": \"Deadlift\",\n      \"record_type\": \"maximum_weight\",\n      \"value\": \"80.000\",\n      \"unit\": \"kg\",\n      \"achieved_on\": \"2026-11-14\"\n    }\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 5,\n      \"user_id\": 23,\n      \"exercise\": \"Deadlift\",\n      \"record_type\": \"maximum_weight\",\n      \"value\": \"80.000\",\n      \"unit\": \"kg\",\n      \"achieved_on\": \"2026-11-14\"\n    }\n  ]\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -5983,7 +5983,7 @@
       "name": "089 - Different user records rejected",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/12/personal-records",
+        "url": "{{baseUrl}}/api/v1/users/21/personal-records",
         "header": [
           {
             "key": "Content-Type",
@@ -6007,7 +6007,7 @@
           "name": "Different user records rejected",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/12/personal-records",
+            "url": "{{baseUrl}}/api/v1/users/21/personal-records",
             "header": [
               {
                 "key": "Content-Type",
@@ -6043,7 +6043,7 @@
       "name": "090 - Personal record details",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/personal-records/3",
+        "url": "{{baseUrl}}/api/v1/personal-records/5",
         "header": [
           {
             "key": "Content-Type",
@@ -6067,7 +6067,7 @@
           "name": "Personal record details",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/personal-records/3",
+            "url": "{{baseUrl}}/api/v1/personal-records/5",
             "header": [
               {
                 "key": "Content-Type",
@@ -6094,7 +6094,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 3,\n    \"user_id\": 14,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"80.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"user_id\": 23,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"80.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -6163,7 +6163,7 @@
       "name": "092 - Update personal record",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/personal-records/3",
+        "url": "{{baseUrl}}/api/v1/personal-records/5",
         "header": [
           {
             "key": "Content-Type",
@@ -6196,7 +6196,7 @@
           "name": "Update personal record",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/personal-records/3",
+            "url": "{{baseUrl}}/api/v1/personal-records/5",
             "header": [
               {
                 "key": "Content-Type",
@@ -6232,7 +6232,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 3,\n    \"user_id\": 14,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"85.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 5,\n    \"user_id\": 23,\n    \"exercise\": \"Deadlift\",\n    \"record_type\": \"maximum_weight\",\n    \"value\": \"85.000\",\n    \"unit\": \"kg\",\n    \"achieved_on\": \"2026-11-14\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -6241,7 +6241,7 @@
       "name": "093 - Invalid calendar date",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/personal-records/3",
+        "url": "{{baseUrl}}/api/v1/personal-records/5",
         "header": [
           {
             "key": "Content-Type",
@@ -6274,7 +6274,7 @@
           "name": "Invalid calendar date",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/personal-records/3",
+            "url": "{{baseUrl}}/api/v1/personal-records/5",
             "header": [
               {
                 "key": "Content-Type",
@@ -6319,7 +6319,7 @@
       "name": "094 - Delete personal record",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/personal-records/3",
+        "url": "{{baseUrl}}/api/v1/personal-records/5",
         "header": [
           {
             "key": "Content-Type",
@@ -6343,7 +6343,7 @@
           "name": "Delete personal record",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/personal-records/3",
+            "url": "{{baseUrl}}/api/v1/personal-records/5",
             "header": [
               {
                 "key": "Content-Type",
@@ -6379,7 +6379,7 @@
       "name": "095 - Delete missing personal record",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/v1/personal-records/3",
+        "url": "{{baseUrl}}/api/v1/personal-records/5",
         "header": [
           {
             "key": "Content-Type",
@@ -6403,7 +6403,7 @@
           "name": "Delete missing personal record",
           "originalRequest": {
             "method": "DELETE",
-            "url": "{{baseUrl}}/api/v1/personal-records/3",
+            "url": "{{baseUrl}}/api/v1/personal-records/5",
             "header": [
               {
                 "key": "Content-Type",
@@ -6439,7 +6439,7 @@
       "name": "096 - Record absence after class completion",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reservations/10/attendance",
+        "url": "{{baseUrl}}/api/v1/reservations/16/attendance",
         "header": [
           {
             "key": "Content-Type",
@@ -6472,7 +6472,7 @@
           "name": "Record absence after class completion",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reservations/10/attendance",
+            "url": "{{baseUrl}}/api/v1/reservations/16/attendance",
             "header": [
               {
                 "key": "Content-Type",
@@ -6508,7 +6508,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 10,\n    \"user_id\": 14,\n    \"class_id\": 12,\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"status\": \"no_show\",\n    \"class_name\": \"Past Yoga 1794712142914\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-01 03:09:04\",\n    \"ends_at\": \"2026-11-01 04:09:04\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 16,\n    \"user_id\": 23,\n    \"class_id\": 19,\n    \"created_at\": \"2026-11-15 03:45:34\",\n    \"status\": \"no_show\",\n    \"class_name\": \"Past Yoga 1794714334076\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-01 03:45:35\",\n    \"ends_at\": \"2026-11-01 04:45:35\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -6537,7 +6537,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 12,\n  \"rating\": 5\n}",
+          "raw": "{\n  \"classId\": 19,\n  \"rating\": 5\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -6570,7 +6570,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 12,\n  \"rating\": 5\n}",
+              "raw": "{\n  \"classId\": 19,\n  \"rating\": 5\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -6595,7 +6595,7 @@
       "name": "098 - Final attendance state cannot be overwritten",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reservations/10/attendance",
+        "url": "{{baseUrl}}/api/v1/reservations/16/attendance",
         "header": [
           {
             "key": "Content-Type",
@@ -6628,7 +6628,7 @@
           "name": "Final attendance state cannot be overwritten",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reservations/10/attendance",
+            "url": "{{baseUrl}}/api/v1/reservations/16/attendance",
             "header": [
               {
                 "key": "Content-Type",
@@ -6673,7 +6673,7 @@
       "name": "099 - Weekly streak and category totals",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/14/progress",
+        "url": "{{baseUrl}}/api/v1/users/23/progress",
         "header": [
           {
             "key": "Content-Type",
@@ -6697,7 +6697,7 @@
           "name": "Weekly streak and category totals",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/14/progress",
+            "url": "{{baseUrl}}/api/v1/users/23/progress",
             "header": [
               {
                 "key": "Content-Type",
@@ -6733,7 +6733,7 @@
       "name": "100 - Different user progress rejected",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/users/12/progress",
+        "url": "{{baseUrl}}/api/v1/users/21/progress",
         "header": [
           {
             "key": "Content-Type",
@@ -6757,7 +6757,7 @@
           "name": "Different user progress rejected",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/users/12/progress",
+            "url": "{{baseUrl}}/api/v1/users/21/progress",
             "header": [
               {
                 "key": "Content-Type",
@@ -6793,7 +6793,7 @@
       "name": "101 - Client cannot register its own attendance",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reservations/8/attendance",
+        "url": "{{baseUrl}}/api/v1/reservations/14/attendance",
         "header": [
           {
             "key": "Content-Type",
@@ -6826,7 +6826,7 @@
           "name": "Client cannot register its own attendance",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reservations/8/attendance",
+            "url": "{{baseUrl}}/api/v1/reservations/14/attendance",
             "header": [
               {
                 "key": "Content-Type",
@@ -6922,7 +6922,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"date\": \"2026-11-14\",\n    \"timeZone\": \"America/Bogota\",\n    \"purchaseCount\": 3,\n    \"totalPaid\": \"375000.00\",\n    \"packages\": [\n      {\n        \"packageId\": 1,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 3,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 5,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      }\n    ]\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"date\": \"2026-11-14\",\n    \"timeZone\": \"America/Bogota\",\n    \"purchaseCount\": 5,\n    \"totalPaid\": \"625000.00\",\n    \"packages\": [\n      {\n        \"packageId\": 1,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 3,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 5,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 7,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      },\n      {\n        \"packageId\": 9,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"125000.00\"\n      }\n    ]\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -7281,7 +7281,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Other Client\",\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"name\": \"Other Client\",\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7304,7 +7304,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Other Client\",\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"name\": \"Other Client\",\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7320,7 +7320,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 16,\n    \"name\": \"Other Client\",\n    \"email\": \"other1794712142914@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 25,\n    \"name\": \"Other Client\",\n    \"email\": \"other1794714334076@fitpulse.example\",\n    \"role\": \"client\",\n    \"status\": \"active\",\n    \"registered_at\": \"2026-11-15 03:45:34\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -7339,7 +7339,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7362,7 +7362,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7378,7 +7378,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 16,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 25,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -7387,7 +7387,7 @@
       "name": "111 - Reservation ownership",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/v1/reservations/8",
+        "url": "{{baseUrl}}/api/v1/reservations/14",
         "header": [
           {
             "key": "Content-Type",
@@ -7411,7 +7411,7 @@
           "name": "Reservation ownership",
           "originalRequest": {
             "method": "GET",
-            "url": "{{baseUrl}}/api/v1/reservations/8",
+            "url": "{{baseUrl}}/api/v1/reservations/14",
             "header": [
               {
                 "key": "Content-Type",
@@ -7447,7 +7447,7 @@
       "name": "112 - Review ownership",
       "request": {
         "method": "PATCH",
-        "url": "{{baseUrl}}/api/v1/reviews/7",
+        "url": "{{baseUrl}}/api/v1/reviews/12",
         "header": [
           {
             "key": "Content-Type",
@@ -7480,7 +7480,7 @@
           "name": "Review ownership",
           "originalRequest": {
             "method": "PATCH",
-            "url": "{{baseUrl}}/api/v1/reviews/7",
+            "url": "{{baseUrl}}/api/v1/reviews/12",
             "header": [
               {
                 "key": "Content-Type",
@@ -7535,7 +7535,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7558,7 +7558,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7593,7 +7593,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7616,7 +7616,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7651,7 +7651,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7674,7 +7674,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7709,7 +7709,7 @@
         "description": "Recorded expected status: 401",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7732,7 +7732,7 @@
             "description": "Recorded expected status: 401",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7767,7 +7767,7 @@
         "description": "Recorded expected status: 423",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7790,7 +7790,7 @@
             "description": "Recorded expected status: 423",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7825,7 +7825,7 @@
         "description": "Recorded expected status: 423",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7848,7 +7848,7 @@
             "description": "Recorded expected status: 423",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7883,7 +7883,7 @@
         "description": "Recorded expected status: 201",
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+          "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7906,7 +7906,7 @@
             "description": "Recorded expected status: 201",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"other1794712142914@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
+              "raw": "{\n  \"email\": \"other1794714334076@fitpulse.example\",\n  \"password\": \"{{password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7922,7 +7922,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 16,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794712142914@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:09:03\"\n    }\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"[redacted]\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": \"1h\",\n    \"user\": {\n      \"id\": 25,\n      \"name\": \"Other Client\",\n      \"email\": \"other1794714334076@fitpulse.example\",\n      \"role\": \"client\",\n      \"status\": \"active\",\n      \"registered_at\": \"2026-11-15 03:45:34\"\n    }\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -7951,7 +7951,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Last Spot\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.924Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.924Z\",\n  \"capacity\": 1,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+          "raw": "{\n  \"name\": \"Last Spot\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:35.050Z\",\n  \"endsAt\": \"2026-11-17T04:45:35.050Z\",\n  \"capacity\": 1,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -7984,7 +7984,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Last Spot\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:09:03.924Z\",\n  \"endsAt\": \"2026-11-17T04:09:03.924Z\",\n  \"capacity\": 1,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
+              "raw": "{\n  \"name\": \"Last Spot\",\n  \"category\": \"yoga\",\n  \"instructorName\": \"Demo Coach\",\n  \"startsAt\": \"2026-11-17T03:45:35.050Z\",\n  \"endsAt\": \"2026-11-17T04:45:35.050Z\",\n  \"capacity\": 1,\n  \"price\": 25000,\n  \"description\": \"Mobility and breathing\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -8000,7 +8000,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 13,\n    \"name\": \"Last Spot\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\",\n    \"capacity\": 1,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 1\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 20,\n    \"name\": \"Last Spot\",\n    \"category\": \"yoga\",\n    \"instructor_name\": \"Demo Coach\",\n    \"starts_at\": \"2026-11-17 03:45:35\",\n    \"ends_at\": \"2026-11-17 04:45:35\",\n    \"capacity\": 1,\n    \"price\": \"25000.00\",\n    \"description\": \"Mobility and breathing\",\n    \"available_spots\": 1\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -8029,7 +8029,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 13\n}",
+          "raw": "{\n  \"classId\": 20\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -8062,7 +8062,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 13\n}",
+              "raw": "{\n  \"classId\": 20\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -8078,7 +8078,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"id\": 11,\n    \"user_id\": 14,\n    \"class_id\": 13,\n    \"created_at\": \"2026-11-15 03:09:03\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Last Spot\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:09:03\",\n    \"ends_at\": \"2026-11-17 04:09:03\"\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"id\": 17,\n    \"user_id\": 23,\n    \"class_id\": 20,\n    \"created_at\": \"2026-11-15 03:45:35\",\n    \"status\": \"reserved\",\n    \"class_name\": \"Last Spot\",\n    \"category\": \"yoga\",\n    \"starts_at\": \"2026-11-17 03:45:35\",\n    \"ends_at\": \"2026-11-17 04:45:35\"\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]
@@ -8107,7 +8107,7 @@
         },
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"classId\": 13\n}",
+          "raw": "{\n  \"classId\": 20\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -8140,7 +8140,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"classId\": 13\n}",
+              "raw": "{\n  \"classId\": 20\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -8216,7 +8216,7 @@
               "value": "application/json"
             }
           ],
-          "body": "{\n  \"data\": {\n    \"date\": \"2020-01-01\",\n    \"timeZone\": \"America/Bogota\",\n    \"purchaseCount\": 1,\n    \"totalPaid\": \"0.01\",\n    \"packages\": [\n      {\n        \"packageId\": 5,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"0.01\"\n      }\n    ]\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"date\": \"2020-01-01\",\n    \"timeZone\": \"America/Bogota\",\n    \"purchaseCount\": 1,\n    \"totalPaid\": \"0.01\",\n    \"packages\": [\n      {\n        \"packageId\": 9,\n        \"purchaseCount\": 1,\n        \"totalPaid\": \"0.01\"\n      }\n    ]\n  }\n}",
           "_postman_previewlanguage": "json"
         }
       ]

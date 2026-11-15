@@ -2,6 +2,8 @@
 
 API REST para gestionar clientes, clases, paquetes, compras, reservas, asistencia, reseñas y marcas personales. Usa Node.js 22 o superior, Express y MySQL 8.0.16 o superior. El esquema tiene **7 tablas, 49 columnas, 7 claves foráneas y 35 operaciones HTTP**.
 
+Guía detallada: [instalar, migrar, probar y abrir las páginas desde cero en Windows](docs/guia-desde-cero.md).
+
 ## Ejecutar en Visual Studio Code
 
 1. Abre la raíz del repositorio, donde está `package.json`.
@@ -39,6 +41,7 @@ Configura `TEST_DB_NAME` con una base desechable distinta de `DB_NAME`, terminad
 
 ```sh
 npm run test:passwords
+npm run test:progress
 npm run test:schema
 npm test
 npm run test:credential-tools
@@ -69,6 +72,6 @@ Las reservas y las marcas personales tienen tablas propias. La asistencia se man
 
 La versión actual incorpora Argon2id con salt independiente, migración de contraseñas y las dos páginas de Laura: progreso y marcas personales. Se conservan las siete tablas y las 35 operaciones de negocio. Las páginas usan datos reales de la API y permiten registro e inicio de sesión mediante un diálogo compartido. El catálogo, las compras, las reservas y el panel administrativo no tienen todavía sus propias pantallas web en este repositorio. RF-11 conserva sus permisos de backend.
 
-Figma rechazó la lectura del enlace proporcionado: el diseño de las páginas es una propuesta propia pendiente de contrastar con el prototipo. Los archivos en `docs/informe/` corresponden a la revisión histórica del segundo corte; la etapa actual está documentada en `docs/third-cut/`. La migración debe ejecutarse en cada instalación existente: el código publicado no modifica por sí solo tu base local.
+La interfaz se adaptó a las capturas del prototipo aportadas por la usuaria: encabezado amarillo, menú negro, tarjetas claras, calendario semanal, gráfico circular y resumen de marcas. El acceso tiene fondo de gimnasio, tarjeta blanca y confirmación de contraseña. Se comparó visualmente con esas capturas; no se pudo inspeccionar directamente el archivo editable de Figma. Los archivos en `docs/informe/` corresponden a la revisión histórica del segundo corte; la etapa actual está documentada en `docs/third-cut/`. La migración debe ejecutarse en cada instalación existente: el código publicado no modifica por sí solo tu base local.
 
 Para usar las páginas, inicia sesión con la cuenta de cliente preparada por `db:demo`, o crea una cuenta nueva. Una cuenta sin asistencia confirmada muestra cero clases; esto es correcto. Sigue [el recorrido de la interfaz](docs/third-cut/web-pages.md) para probar las pantallas y preparar una asistencia de demostración.

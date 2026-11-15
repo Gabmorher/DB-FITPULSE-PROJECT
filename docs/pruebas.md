@@ -9,13 +9,14 @@ Ejecución del 14 de noviembre de 2026, con **Node.js 22.23.5** y **MySQL 8.4.13
 | Integración HTTP | 123 casos y 299 comprobaciones; sin fallos | `evidence/test-results.json` |
 | Contrato completo | Éxito y error para las 35 operaciones OpenAPI | `summary.coverage` en el mismo archivo |
 | Contraseñas y salt | 4 pruebas aprobadas | `tests/passwords.test.js` y salida de `npm run test:passwords` |
+| Calendario y categorías | 3 pruebas aprobadas | `tests/progress-data.test.js` y `npm run test:progress` |
 | Cuentas y migración | 7 casos aprobados | `evidence/credential-tools-results.json` |
 | Compatibilidad del esquema | 5 casos aprobados con cambios reales en una base temporal | `evidence/schema-results.json` |
 | Colección Postman, ejecutada con Newman 6.2.1 | 76 solicitudes y 149 comprobaciones; sin fallos | `evidence/newman-results.json` |
 | Modelo físico | 7 tablas, 49 columnas y 7 FK | `evidence/model-metadata.json` |
-| Catálogo, lote de 50 peticiones concurrentes | p95: 120,394 ms | `summary.catalogLoad` |
-| Historial personal, lote de 50 peticiones concurrentes | p95: 65,853 ms | `summary.personalLoad` |
-| Una consulta de progreso con la muestra de prueba | 2,227 ms; umbral de 10 s superado favorablemente | Caso `Weekly streak and category totals` |
+| Catálogo, lote de 50 peticiones concurrentes | p95: 111,955 ms | `summary.catalogLoad` |
+| Historial personal, lote de 50 peticiones concurrentes | p95: 72,275 ms | `summary.personalLoad` |
+| Una consulta de progreso con la muestra de prueba | 2,604 ms; umbral de 10 s superado favorablemente | Caso `Weekly streak and category totals` |
 
 Los dos lotes usan el mismo token de cliente. Son 50 solicitudes simultáneas, no 50 usuarios diferentes ni una prueba sostenida; por ello no se declara validado RNF-04. La medición de progreso usa un historial pequeño y no permite extrapolar a volúmenes grandes. Las cifras anteriores se deben actualizar desde el JSON si se repite la ejecución.
 
@@ -27,6 +28,7 @@ Instala Node.js 22 y MySQL, ejecuta `npm ci` y configura `.env` como indica el R
 
 ```sh
 npm run test:passwords
+npm run test:progress
 npm run test:schema
 npm test
 npm run test:credential-tools
@@ -66,3 +68,5 @@ La prueba de concurrencia de `npm test` envía dos reservas de clientes distinto
 
 
 La revisión de navegador de las dos páginas se detalla en `evidence/web-review.json`. Se usó una sesión sintética preparada por un arnés local externo al repositorio. Registro, login y migración se verificaron mediante las pruebas HTTP y de comandos; no se atribuye al navegador una entrada manual de credenciales que no se realizó.
+
+La revisión visual actual utiliza las capturas de Figma aportadas por la usuaria: comprueba el calendario, gráfico circular, resumen de marcas y el recorrido de edición. El acceso al archivo editable sigue sin estar disponible. Consulta la [guía desde cero](guia-desde-cero.md) para instalar, migrar y repetir las pruebas en Windows.
