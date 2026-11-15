@@ -99,12 +99,13 @@ export async function listAll(route, signal) {
 
 export function errorMessage(error) {
   const translations = {
-    "Invalid credentials": "El correo o la contraseña no coinciden.",
+    "Invalid credentials": "Correo o contraseña inválidos.",
     "Account is inactive":
       "Esta cuenta está desactivada. Contacta al administrador.",
     "Account is temporarily locked":
       "Tu cuenta está bloqueada temporalmente por intentos fallidos. Inténtalo más tarde.",
     "Invalid or expired token": "Tu sesión venció. Inicia sesión nuevamente.",
+    "Invalid session": "Tu sesión ya no es válida. Inicia sesión nuevamente.",
     "Access denied": "Tu cuenta no tiene permiso para realizar esta operación.",
     "The email is already registered": "Este correo ya está registrado.",
     "The resource already exists": "Ya existe un registro con estos datos.",

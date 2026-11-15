@@ -1,15 +1,15 @@
 import { getSession, request, listAll, errorMessage } from "./api.js";
 import {
-  initialize,
   element,
-  icon,
   number,
   dateLabel,
   businessToday,
   status,
   showData,
   setBusy,
-} from "./app.js";
+} from "./ui.js";
+import { icon } from "./icons.js";
+import { initializePage } from "./shell.js";
 
 const typeLabels = {
   maximum_weight: "Peso máximo",
@@ -74,10 +74,7 @@ function syncCustomType() {
 
 async function openRecord(item) {
   const session = getSession();
-  if (!session) {
-    document.querySelector("#auth-dialog").showModal();
-    return;
-  }
+  if (!session) return;
   if (session.user.role !== "client") {
     status(
       "error",
@@ -363,26 +360,6 @@ function render() {
   renderTrend();
 }
 
-function clear() {
-  activeLoad?.abort();
-  records = [];
-  editingId = null;
-  deletingId = null;
-  document.querySelector("#record-dialog").close();
-  document.querySelector("#delete-dialog").close();
-  for (const selector of [
-    "#records-count",
-    "#exercises-count",
-    "#latest-record",
-  ])
-    document.querySelector(selector).textContent = "—";
-  document.querySelector("#records-body").replaceChildren();
-  document.querySelector("#trend-chart").replaceChildren();
-  document.querySelector("#search-records").value = "";
-  document.querySelector("#type-filter").value = "";
-  document.querySelector("#retry-button").hidden = true;
-}
-
 async function load(message) {
   activeLoad?.abort();
   const session = getSession();
@@ -390,7 +367,6 @@ async function load(message) {
     showData(false);
     return;
   }
-  document.querySelector("#guest-state").hidden = true;
   activeLoad = new AbortController();
   const signal = activeLoad.signal;
   const refresh = document.querySelector("#refresh-button");
@@ -452,11 +428,4 @@ for (const selector of ["#search-records", "#type-filter", "#sort-records"])
       renderTable,
     );
 document.querySelector("#trend-filter").addEventListener("change", renderTrend);
-initialize(load, clear).catch((error) => status("error", errorMessage(error)));
-businessToday()
-  .then((date) => {
-    document.querySelector("#today-label").textContent = dateLabel(date, {
-      year: "numeric",
-    });
-  })
-  .catch(() => {});
+initializePage(load);
