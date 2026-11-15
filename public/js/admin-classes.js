@@ -1,7 +1,8 @@
 import { request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy, showAlert } from "./ui.js";
-import { money, capitalize, scheduleFormatter } from "./format.js";
+import { element, status, setBusy, showAlert, renderStats } from "./ui.js";
+import { money, scheduleFormatter } from "./format.js";
+import { categoryName } from "./class-images.js";
 import { showResult } from "./modal.js";
 import { initializePage } from "./shell.js";
 
@@ -23,7 +24,7 @@ function classRow(item) {
   const occupied = item.capacity - item.available_spots;
   row.append(
     element("td", "", item.name),
-    element("td", "", capitalize(item.category)),
+    element("td", "", categoryName(item.category)),
     element("td", "", item.instructor_name),
     element("td", "", schedule.range(item.starts_at, item.ends_at)),
     element("td", "number-cell", `${occupied}/${item.capacity}`),
@@ -32,7 +33,25 @@ function classRow(item) {
   return row;
 }
 
+function renderClassStats(classes) {
+  const capacity = classes.reduce((sum, item) => sum + item.capacity, 0);
+  const reserved = classes.reduce(
+    (sum, item) => sum + item.capacity - item.available_spots,
+    0,
+  );
+  const categories = new Set(classes.map((item) => item.category)).size;
+  renderStats([
+    {
+      value: classes.length,
+      label: classes.length === 1 ? "clase en catálogo" : "clases en catálogo",
+    },
+    { value: categories, label: categories === 1 ? "categoría" : "categorías" },
+    { value: `${reserved}/${capacity}`, label: "cupos reservados" },
+  ]);
+}
+
 function renderClasses(classes) {
+  renderClassStats(classes);
   document
     .querySelector("#class-rows")
     .replaceChildren(...classes.map(classRow));
@@ -41,7 +60,7 @@ function renderClasses(classes) {
   document
     .querySelector("#category-options")
     .replaceChildren(
-      ...categories.map((category) => new Option(capitalize(category))),
+      ...categories.map((category) => new Option(categoryName(category))),
     );
 }
 

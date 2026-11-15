@@ -33,7 +33,9 @@
   --color-field: #d9d9d9;
   --color-panel: #dcdcdc;
   --color-table-head: #a6a3a3;
-  --color-page: #fff;
+  --color-page: #f6f5ef;
+  --color-surface: #fff;
+  --shadow-soft: 0 2px 10px rgb(0 0 0 / 0.07);
   --color-success: #1e8e3e;
   --color-success-soft: #e3f3e7;
   --color-error: #c62828;
@@ -347,4 +349,40 @@ select.field-input {
     animation-duration: 2s !important;
     transition: none !important;
   }
+}
+.empty-panel {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+  padding: 40px 20px;
+  border: 2px dashed var(--color-line);
+  border-radius: 14px;
+  background: var(--color-surface);
+  text-align: center;
+}
+.empty-panel strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+.empty-panel p {
+  max-width: 420px;
+  color: var(--color-muted);
+  font-size: 16px;
+}
+.empty-panel .button {
+  margin-top: 8px;
+}
+.empty-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+.empty-icon svg {
+  width: 30px;
+  height: 30px;
 }

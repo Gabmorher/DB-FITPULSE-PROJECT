@@ -8,7 +8,7 @@
 }
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 18px;
 }
 .review-grid > .loading-state,
@@ -20,9 +20,11 @@
   align-content: start;
   gap: 10px;
   min-height: 170px;
-  padding: 16px;
-  border-radius: 6px;
-  background: var(--color-panel);
+  padding: 18px;
+  border-top: 5px solid var(--color-yellow);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
 }
 .review-author {
   display: flex;
@@ -85,8 +87,9 @@
   display: grid;
   gap: 16px;
   padding: 22px;
-  border: 4px solid var(--color-field);
-  border-radius: 8px;
+  border-radius: 14px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
 }
 .review-form-header {
   display: flex;

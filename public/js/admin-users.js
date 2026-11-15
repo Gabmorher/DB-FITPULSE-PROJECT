@@ -1,6 +1,6 @@
 import { request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy } from "./ui.js";
+import { element, status, setBusy, renderStats } from "./ui.js";
 import { scheduleFormatter } from "./format.js";
 import { createPager } from "./pagination.js";
 import { showResult } from "./modal.js";
@@ -63,6 +63,25 @@ async function loadClients() {
     clients = (await listAll("/users")).filter(
       (user) => user.role === "client",
     );
+    const active = clients.filter((user) => user.status === "active").length;
+    renderStats([
+      {
+        value: clients.length,
+        label:
+          clients.length === 1 ? "cliente registrado" : "clientes registrados",
+      },
+      {
+        value: active,
+        label: active === 1 ? "cuenta activa" : "cuentas activas",
+      },
+      {
+        value: clients.length - active,
+        label:
+          clients.length - active === 1
+            ? "cuenta inactiva"
+            : "cuentas inactivas",
+      },
+    ]);
     pager.setItems(clients);
     document.querySelector("#client-empty").hidden = clients.length > 0;
     status("", "");

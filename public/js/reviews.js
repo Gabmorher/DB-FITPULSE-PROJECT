@@ -1,6 +1,13 @@
 import { getSession, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy, showAlert, loadingState } from "./ui.js";
+import {
+  status,
+  setBusy,
+  showAlert,
+  loadingState,
+  emptyState,
+  renderStats,
+} from "./ui.js";
 import { apiDate, scheduleFormatter } from "./format.js";
 import { showResult } from "./modal.js";
 import { avatar, reviewCard } from "./review-list.js";
@@ -32,17 +39,39 @@ async function classReviews(scheduledClass) {
 }
 
 function renderReviews(reviews) {
+  if (reviews.length) {
+    grid.replaceChildren(...reviews.map(reviewCard));
+    return;
+  }
   grid.replaceChildren(
-    ...(reviews.length
-      ? reviews.map(reviewCard)
-      : [
-          element(
-            "p",
-            "empty-state",
-            "Todavía no hay reseñas. Sé la primera persona en compartir tu experiencia.",
-          ),
-        ]),
+    emptyState({
+      iconName: "star",
+      title: "Todavía no hay reseñas",
+      text: "Cuando asistas a una clase, cuéntale a la comunidad cómo te fue.",
+    }),
   );
+}
+
+function renderReviewStats(reviews) {
+  const average = reviews.length
+    ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
+    : 0;
+  const reviewedClasses = new Set(reviews.map((review) => review.class_id))
+    .size;
+  renderStats([
+    {
+      value: average ? average.toFixed(1) : "—",
+      label: "promedio de 5 estrellas",
+    },
+    {
+      value: reviews.length,
+      label: reviews.length === 1 ? "reseña" : "reseñas",
+    },
+    {
+      value: reviewedClasses,
+      label: reviewedClasses === 1 ? "clase calificada" : "clases calificadas",
+    },
+  ]);
 }
 
 function prepareForm(attended, reviews, userId) {
@@ -77,6 +106,7 @@ async function loadReviews() {
       .sort((first, second) =>
         second.created_at.localeCompare(first.created_at),
       );
+    renderReviewStats(reviews);
     renderReviews(reviews);
     prepareForm(attended, reviews, userId);
   } catch (error) {

@@ -1,7 +1,8 @@
 import { getSession, request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
 import { element, number, status, loadingState } from "./ui.js";
-import { apiDate, capitalize, daysAgo, scheduleFormatter } from "./format.js";
+import { apiDate, daysAgo, scheduleFormatter } from "./format.js";
+import { categoryName } from "./class-images.js";
 import { typeLabel } from "./record-types.js";
 import { initializePage } from "./shell.js";
 
@@ -56,10 +57,14 @@ function renderTotals({ categoryTotals, totalAttended }) {
       element(
         "p",
         "",
-        `${capitalize(category)}: ${plural(count, "clase", "clases")} (${Math.round((count / totalAttended) * 100)} %)`,
+        `${categoryName(category)}: ${plural(count, "clase", "clases")} (${Math.round((count / totalAttended) * 100)} %)`,
       ),
     ),
-    element("p", "", `Categoría más visitada: ${capitalize(categories[0][0])}`),
+    element(
+      "p",
+      "",
+      `Categoría más visitada: ${categoryName(categories[0][0])}`,
+    ),
   );
 }
 

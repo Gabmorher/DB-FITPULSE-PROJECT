@@ -1,6 +1,12 @@
 import { getSession, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, loadingState } from "./ui.js";
+import {
+  element,
+  status,
+  loadingState,
+  emptyState,
+  renderStats,
+} from "./ui.js";
 import { apiDate, scheduleFormatter } from "./format.js";
 import { classCard, detail, toggleDescription } from "./class-card.js";
 import { initializePage } from "./shell.js";
@@ -70,15 +76,43 @@ function reservationItem(reservation) {
 }
 
 function emptyMessage() {
-  const message = element("p", "empty-state");
-  if (activeTab === "history") {
-    message.textContent = "Aún no tienes clases en tu historial.";
-    return message;
-  }
-  const link = element("a", "", "reserva una en el catálogo");
-  link.href = "/catalog.html";
-  message.append("No tienes clases próximas. Puedes ", link, ".");
-  return message;
+  if (activeTab === "history")
+    return emptyState({
+      iconName: "check",
+      title: "Tu historial está por comenzar",
+      text: "Aquí verás las clases que ya pasaron y si se confirmó tu asistencia.",
+    });
+  return emptyState({
+    iconName: "calendar",
+    title: "No tienes clases próximas",
+    text: "Elige una clase del catálogo y asegura tu cupo.",
+    action: { href: "/catalog.html", label: "Ir al catálogo" },
+  });
+}
+
+function renderReservationStats() {
+  const upcoming = reservations.filter(
+    (reservation) =>
+      reservation.status === "reserved" && isUpcoming(reservation),
+  ).length;
+  const attended = reservations.filter(
+    (reservation) => reservation.status === "attended",
+  ).length;
+  renderStats([
+    {
+      value: upcoming,
+      label: upcoming === 1 ? "clase próxima" : "clases próximas",
+    },
+    {
+      value: attended,
+      label: attended === 1 ? "clase asistida" : "clases asistidas",
+    },
+    {
+      value: reservations.length,
+      label:
+        reservations.length === 1 ? "reserva en total" : "reservas en total",
+    },
+  ]);
 }
 
 function visibleReservations() {
@@ -123,6 +157,7 @@ async function loadReservations() {
     ]);
     reservations = userReservations;
     classesById = new Map(classes.map((item) => [item.id, item]));
+    renderReservationStats();
     renderReservations();
   } catch (error) {
     grid.replaceChildren();

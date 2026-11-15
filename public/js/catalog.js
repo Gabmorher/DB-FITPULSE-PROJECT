@@ -1,7 +1,15 @@
 import { request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy, loadingState } from "./ui.js";
-import { money, capitalize, apiDate, scheduleFormatter } from "./format.js";
+import {
+  element,
+  status,
+  setBusy,
+  loadingState,
+  emptyState,
+  renderStats,
+} from "./ui.js";
+import { money, apiDate, scheduleFormatter } from "./format.js";
+import { categoryName } from "./class-images.js";
 import { classCard, detail, toggleDescription } from "./class-card.js";
 import { showResult } from "./modal.js";
 import { initializePage } from "./shell.js";
@@ -36,7 +44,7 @@ function fillFilter(select, values, label) {
 
 function fillFilters() {
   const unique = (key) => [...new Set(classes.map((item) => item[key]))].sort();
-  fillFilter(filters.category, unique("category"), capitalize);
+  fillFilter(filters.category, unique("category"), categoryName);
   fillFilter(filters.instructor, unique("instructor_name"), String);
   fillFilter(
     filters.daypart,
@@ -57,7 +65,7 @@ function matchesFilters(item) {
 function catalogItem(item) {
   const wrapper = element("article", "class-item");
   const card = classCard(item, [
-    detail("Disciplina", capitalize(item.category)),
+    detail("Disciplina", categoryName(item.category)),
     detail("Instructor", item.instructor_name),
     detail("Día", schedule.day(item.starts_at)),
     detail(
@@ -80,14 +88,46 @@ function catalogItem(item) {
 
 function renderClasses() {
   const visible = classes.filter(matchesFilters);
-  if (!visible.length) {
-    const message = classes.length
-      ? "No hay clases que coincidan con los filtros elegidos."
-      : "Aún no hay clases programadas. Vuelve pronto.";
-    grid.replaceChildren(element("p", "empty-state", message));
+  if (visible.length) {
+    grid.replaceChildren(...visible.map(catalogItem));
     return;
   }
-  grid.replaceChildren(...visible.map(catalogItem));
+  grid.replaceChildren(
+    classes.length
+      ? emptyState({
+          iconName: "book",
+          title: "Sin resultados",
+          text: "No hay clases que coincidan con los filtros elegidos. Prueba con otra disciplina u horario.",
+        })
+      : emptyState({
+          iconName: "calendar",
+          title: "Aún no hay clases programadas",
+          text: "Pronto el gimnasio publicará nuevas clases. Mientras tanto, revisa los paquetes disponibles.",
+          action: { href: "/packages.html", label: "Ver paquetes" },
+        }),
+  );
+}
+
+function renderCatalogStats() {
+  const freeSpots = classes.reduce(
+    (sum, item) => sum + item.available_spots,
+    0,
+  );
+  const disciplines = new Set(classes.map((item) => item.category)).size;
+  renderStats([
+    {
+      value: classes.length,
+      label: classes.length === 1 ? "clase disponible" : "clases disponibles",
+    },
+    {
+      value: disciplines,
+      label: disciplines === 1 ? "disciplina" : "disciplinas",
+    },
+    {
+      value: freeSpots,
+      label: freeSpots === 1 ? "cupo libre" : "cupos libres",
+    },
+  ]);
 }
 
 async function loadClasses() {
@@ -100,6 +140,7 @@ async function loadClasses() {
       (item) => apiDate(item.starts_at) > now,
     );
     fillFilters();
+    renderCatalogStats();
     renderClasses();
   } catch (error) {
     grid.replaceChildren();

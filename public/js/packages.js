@@ -1,6 +1,6 @@
 import { request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy, loadingState } from "./ui.js";
+import { element, status, setBusy, loadingState, emptyState } from "./ui.js";
 import { money } from "./format.js";
 import { showResult } from "./modal.js";
 import { initializePage } from "./shell.js";
@@ -14,18 +14,29 @@ function classCount(quantity) {
 
 function packageCard(item) {
   const card = element("article", "package-card");
+  const quantity = element("p", "package-quantity");
+  quantity.append(
+    element("strong", "", item.class_quantity),
+    element("span", "", item.class_quantity === 1 ? "clase" : "clases"),
+  );
+  const price = element("p", "package-price");
+  price.append(
+    element("strong", "", money(item.price)),
+    element(
+      "span",
+      "",
+      `${money(Number(item.price) / item.class_quantity)} por clase`,
+    ),
+  );
   const buyButton = element("button", "button", "Comprar paquete");
   buyButton.type = "button";
   buyButton.dataset.packageId = item.id;
   card.append(
     element("h2", "", item.name),
+    quantity,
+    price,
+    element("p", "package-description", item.description),
     buyButton,
-    element("p", "", `Precio: ${money(item.price)}`),
-    element(
-      "p",
-      "",
-      `Detalles: ${classCount(item.class_quantity)} · ${item.description}`,
-    ),
   );
   return card;
 }
@@ -39,11 +50,11 @@ async function loadPackages() {
       ...(packages.length
         ? packages.map(packageCard)
         : [
-            element(
-              "p",
-              "empty-state",
-              "Por ahora no hay paquetes disponibles.",
-            ),
+            emptyState({
+              iconName: "cart",
+              title: "Por ahora no hay paquetes",
+              text: "El gimnasio publicará nuevos paquetes de clases muy pronto.",
+            }),
           ]),
     );
   } catch (error) {

@@ -1,6 +1,5 @@
 import { element } from "./ui.js";
-import { capitalize } from "./format.js";
-import { imageFor } from "./class-images.js";
+import { imageFor, categoryName } from "./class-images.js";
 
 export function detail(label, value) {
   const line = element("p");
@@ -12,7 +11,7 @@ function classPhoto(category, description) {
   const photo = element("figure", "class-photo");
   const image = element("img");
   image.src = imageFor(category);
-  image.alt = `Clase de ${capitalize(category)}`;
+  image.alt = `Clase de ${categoryName(category)}`;
   const text = element("p", "class-description", description);
   text.hidden = true;
   const toggle = element("button", "description-toggle", "ver descripción");

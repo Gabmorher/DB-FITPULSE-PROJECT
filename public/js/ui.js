@@ -86,3 +86,26 @@ export function loadingState(message) {
   loading.append(element("span", "spinner"), element("p", "", message));
   return loading;
 }
+
+export function emptyState({ iconName, title, text, action }) {
+  const panel = element("div", "empty-panel");
+  const symbol = element("span", "empty-icon");
+  symbol.innerHTML = icon(iconName);
+  panel.append(symbol, element("strong", "", title), element("p", "", text));
+  if (action) {
+    const link = element("a", "button button-small", action.label);
+    link.href = action.href;
+    panel.append(link);
+  }
+  return panel;
+}
+
+export function renderStats(items) {
+  document.querySelector("#page-stats").replaceChildren(
+    ...items.map(({ value, label }) => {
+      const chip = element("div", "stat-chip");
+      chip.append(element("strong", "", value), element("span", "", label));
+      return chip;
+    }),
+  );
+}
