@@ -1,0 +1,53 @@
+.form-panel {
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: #ececec;
+}
+.form-panel .alert {
+  margin-bottom: 16px;
+}
+.form-panel .field-input {
+  border-radius: 10px;
+  background: var(--color-field);
+}
+.form-columns {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+}
+.form-column {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+.field-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.schedule-field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10px;
+}
+.schedule-field legend {
+  margin-bottom: 6px;
+  padding: 0;
+}
+.schedule-field .field {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+.data-table .number-cell {
+  text-align: right;
+  white-space: nowrap;
+}

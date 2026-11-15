@@ -1,0 +1,185 @@
+import { request, listAll } from "./api.js";
+import { errorMessage } from "./messages.js";
+import { element, status, setBusy } from "./ui.js";
+import { money, capitalize, apiDate, scheduleFormatter } from "./format.js";
+import { imageFor } from "./class-images.js";
+import { showResult } from "./modal.js";
+import { initializePage } from "./shell.js";
+
+const dayparts = [
+  { value: "morning", label: "Mañana", until: 12 },
+  { value: "afternoon", label: "Tarde", until: 18 },
+  { value: "night", label: "Noche", until: 24 },
+];
+const grid = document.querySelector("#class-grid");
+const filters = {
+  category: document.querySelector("#category-filter"),
+  instructor: document.querySelector("#instructor-filter"),
+  daypart: document.querySelector("#daypart-filter"),
+};
+let schedule;
+let classes = [];
+
+function daypartOf(item) {
+  const hour = schedule.hour(item.starts_at);
+  return dayparts.find((daypart) => hour < daypart.until).value;
+}
+
+function fillFilter(select, values, label) {
+  const selected = select.value;
+  select.replaceChildren(
+    new Option(select.options[0].text, ""),
+    ...values.map((value) => new Option(label(value), value)),
+  );
+  select.value = values.includes(selected) ? selected : "";
+}
+
+function fillFilters() {
+  const unique = (key) => [...new Set(classes.map((item) => item[key]))].sort();
+  fillFilter(filters.category, unique("category"), capitalize);
+  fillFilter(filters.instructor, unique("instructor_name"), String);
+  fillFilter(
+    filters.daypart,
+    dayparts.map((daypart) => daypart.value),
+    (value) => dayparts.find((daypart) => daypart.value === value).label,
+  );
+}
+
+function matchesFilters(item) {
+  return (
+    (!filters.category.value || item.category === filters.category.value) &&
+    (!filters.instructor.value ||
+      item.instructor_name === filters.instructor.value) &&
+    (!filters.daypart.value || daypartOf(item) === filters.daypart.value)
+  );
+}
+
+function detail(label, value) {
+  const line = element("p");
+  line.append(element("strong", "", `${label}: `), value);
+  return line;
+}
+
+function classPhoto(item) {
+  const photo = element("figure", "class-photo");
+  const image = element("img");
+  image.src = imageFor(item.category);
+  image.alt = `Clase de ${capitalize(item.category)}`;
+  const description = element("p", "class-description", item.description);
+  description.hidden = true;
+  const toggle = element("button", "description-toggle", "ver descripción");
+  toggle.type = "button";
+  toggle.dataset.action = "describe";
+  toggle.setAttribute("aria-expanded", "false");
+  photo.append(image, description, toggle);
+  return photo;
+}
+
+function classCard(item) {
+  const wrapper = element("article", "class-item");
+  const card = element("div", "class-card");
+  const details = element("div", "class-details");
+  details.append(
+    detail("Disciplina", capitalize(item.category)),
+    detail("Instructor", item.instructor_name),
+    detail("Día", schedule.day(item.starts_at)),
+    detail(
+      "Hora",
+      `${schedule.time(item.starts_at)} – ${schedule.time(item.ends_at)}`,
+    ),
+    detail(
+      "Cupos",
+      `${item.capacity - item.available_spots}/${item.capacity} ocupados`,
+    ),
+    detail("Precio", money(item.price)),
+  );
+  card.append(element("h2", "", item.name), classPhoto(item), details);
+  const reserveButton = element("button", "button", "Reservar");
+  reserveButton.type = "button";
+  reserveButton.dataset.action = "reserve";
+  reserveButton.dataset.classId = item.id;
+  wrapper.append(card, reserveButton);
+  return wrapper;
+}
+
+function renderClasses() {
+  const visible = classes.filter(matchesFilters);
+  if (!visible.length) {
+    const message = classes.length
+      ? "No hay clases que coincidan con los filtros elegidos."
+      : "Aún no hay clases programadas. Vuelve pronto.";
+    grid.replaceChildren(element("p", "empty-state", message));
+    return;
+  }
+  grid.replaceChildren(...visible.map(classCard));
+}
+
+function showLoading() {
+  const loading = element("div", "loading-state");
+  loading.append(
+    element("span", "spinner"),
+    element("p", "", "Cargando clases…"),
+  );
+  grid.replaceChildren(loading);
+}
+
+async function loadClasses() {
+  showLoading();
+  status("", "");
+  try {
+    schedule ??= await scheduleFormatter();
+    const now = new Date();
+    classes = (await listAll("/classes")).filter(
+      (item) => apiDate(item.starts_at) > now,
+    );
+    fillFilters();
+    renderClasses();
+  } catch (error) {
+    grid.replaceChildren();
+    status("error", errorMessage(error));
+  }
+}
+
+function toggleDescription(button) {
+  const description = button.parentElement.querySelector(".class-description");
+  description.hidden = !description.hidden;
+  button.textContent = description.hidden ? "ver descripción" : "ocultar";
+  button.setAttribute("aria-expanded", String(!description.hidden));
+}
+
+async function reserve(button) {
+  const item = classes.find(
+    (value) => value.id === Number(button.dataset.classId),
+  );
+  setBusy(button, true, "Reservando…");
+  try {
+    await request("/reservations", {
+      method: "POST",
+      body: { classId: item.id },
+    });
+    await showResult(
+      "success",
+      "¡Reserva exitosa!",
+      `Tu reserva de la clase ${item.name} del ${schedule.day(item.starts_at)} a las ${schedule.time(item.starts_at)} fue exitosa.`,
+    );
+    await loadClasses();
+  } catch (error) {
+    setBusy(button, false);
+    const title =
+      error.message === "The class is full"
+        ? `Sin cupos para “${item.name}”`
+        : "No pudimos completar tu reserva";
+    await showResult("error", title, errorMessage(error));
+  }
+}
+
+grid.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-action]");
+  if (!button || button.disabled) return;
+  if (button.dataset.action === "describe") toggleDescription(button);
+  else reserve(button);
+});
+Object.values(filters).forEach((select) =>
+  select.addEventListener("change", renderClasses),
+);
+initializePage(loadClasses);

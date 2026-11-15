@@ -1,4 +1,5 @@
-import { getSession, request, listAll, errorMessage } from "./api.js";
+import { getSession, request, listAll } from "./api.js";
+import { errorMessage } from "./messages.js";
 import {
   element,
   number,

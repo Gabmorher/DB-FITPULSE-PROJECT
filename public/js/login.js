@@ -1,4 +1,5 @@
-import { getSession, setSession, request, errorMessage } from "./api.js";
+import { getSession, setSession, request } from "./api.js";
+import { errorMessage } from "./messages.js";
 import { renderIcons } from "./icons.js";
 import { setBusy, showAlert, bindPasswordToggle } from "./ui.js";
 import { openSessionHome } from "./navigation.js";

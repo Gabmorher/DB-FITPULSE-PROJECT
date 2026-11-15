@@ -1,4 +1,5 @@
-import { getSession, setSession, request, errorMessage } from "./api.js";
+import { getSession, setSession, request } from "./api.js";
+import { errorMessage } from "./messages.js";
 import { icon, renderIcons } from "./icons.js";
 import { element, status } from "./ui.js";
 import { menus, loginPage, homePageFor } from "./navigation.js";
