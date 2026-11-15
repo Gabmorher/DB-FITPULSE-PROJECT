@@ -40,8 +40,15 @@ export async function scheduleFormatter() {
     day: "2-digit",
   });
   const today = dateKey.format(new Date());
+  const shortDate = new Intl.DateTimeFormat("es-CO", {
+    timeZone,
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit",
+  });
   return {
     isToday: (value) => dateKey.format(apiDate(value)) === today,
+    shortDate: (value) => shortDate.format(apiDate(value)),
     day: (value) => capitalize(day.format(apiDate(value))),
     time: (value) => time.format(apiDate(value)),
     hour: (value) => Number(hour.format(apiDate(value))),

@@ -2,7 +2,7 @@ export const loginPage = "/login.html";
 
 const homePages = {
   client: "/progress.html",
-  admin: "/admin-classes.html",
+  admin: "/admin-sales.html",
 };
 
 export const menus = {

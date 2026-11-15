@@ -45,3 +45,37 @@
   text-align: right;
   white-space: nowrap;
 }
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 920px;
+}
+.summary-card {
+  display: grid;
+  gap: 4px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--color-panel);
+}
+.summary-card strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+.summary-card span {
+  font-size: 18px;
+}
+.page-label {
+  align-self: center;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+.status-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.status-cell .button-secondary {
+  background: #fff;
+}
