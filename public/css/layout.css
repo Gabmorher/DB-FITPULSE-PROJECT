@@ -147,3 +147,13 @@
   gap: 14px;
   margin-top: 16px;
 }
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+.form-hint {
+  color: var(--color-muted);
+  font-size: 14px;
+}

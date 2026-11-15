@@ -34,6 +34,13 @@ const translations = {
   "The class has already started": "Esta clase ya comenzó. Elige otra.",
   "Class not found": "Esta clase ya no existe. Actualiza el catálogo.",
   "Package not found": "Este paquete ya no existe. Actualiza la lista.",
+  "Only classes attended by this user can be reviewed":
+    "Solo puedes reseñar clases a las que asististe.",
+  "This user already reviewed the class": "Ya reseñaste esta clase.",
+  "rating must be an integer between 1 and 5":
+    "Elige una calificación de 1 a 5 estrellas.",
+  "tags must be an array of at most 10 strings":
+    "Puedes agregar como máximo 10 etiquetas.",
   "Internal server error":
     "El servidor no pudo completar la operación. Inténtalo nuevamente.",
 };
@@ -46,6 +53,8 @@ const fieldLabels = {
   category: "La categoría",
   instructorName: "El instructor",
   description: "La descripción",
+  comment: "El comentario",
+  tag: "Cada etiqueta",
 };
 
 const textFieldPattern =

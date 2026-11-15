@@ -41,12 +41,6 @@
   font-size: 13px;
   color: var(--color-muted);
 }
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-top: 18px;
-}
 .data-table .number-cell {
   text-align: right;
   white-space: nowrap;

@@ -50,3 +50,11 @@ export async function scheduleFormatter() {
     },
   };
 }
+
+const millisecondsPerDay = 86400000;
+const relativeTime = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+export function daysAgo(value) {
+  const days = Math.round((apiDate(value) - new Date()) / millisecondsPerDay);
+  return capitalize(relativeTime.format(days, "day"));
+}
