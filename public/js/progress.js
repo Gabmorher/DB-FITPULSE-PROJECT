@@ -15,17 +15,13 @@ import {
   status,
   showData,
 } from "./app.js";
+import { calendarDays, categoryShares } from "./progress-data.js";
 
 let attended = [];
 let activeLoad;
 let today;
 let timeZone;
-
-function weekStart(value) {
-  const date = new Date(`${value}T12:00:00Z`);
-  date.setUTCDate(date.getUTCDate() - ((date.getUTCDay() + 6) % 7));
-  return date.toISOString().slice(0, 10);
-}
+let weekOffset = 0;
 
 function classDate(value) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -48,54 +44,48 @@ function empty(parent, title, description) {
 
 function renderActivity() {
   const parent = document.querySelector("#activity-chart");
-  if (!attended.length) {
-    empty(
-      parent,
-      "Tu primera asistencia inicia el recorrido.",
-      "Las clases aparecerán cuando el administrador confirme tu asistencia.",
-    );
-    return;
-  }
-  const weeks = Number(document.querySelector("#weeks-filter").value);
-  const cursor = new Date(`${weekStart(today)}T12:00:00Z`);
-  cursor.setUTCDate(cursor.getUTCDate() - (weeks - 1) * 7);
-  const values = [];
-  for (let index = 0; index < weeks; index++) {
-    const date = cursor.toISOString().slice(0, 10);
-    values.push({
-      date,
-      total: attended.filter(
-        (item) => weekStart(classDate(item.starts_at)) === date,
-      ).length,
-    });
-    cursor.setUTCDate(cursor.getUTCDate() + 7);
-  }
-  const maximum = Math.max(1, ...values.map((value) => value.total));
-  const chart = element("div", "weekly-chart");
-  chart.setAttribute("role", "img");
-  chart.setAttribute(
-    "aria-label",
-    values
-      .map(
-        (value) => `Semana del ${dateLabel(value.date)}: ${value.total} clases`,
-      )
-      .join(". "),
+  const days = calendarDays(
+    today,
+    attended.map((item) => classDate(item.starts_at)),
+    weekOffset,
   );
-  const labels = element("div", "chart-labels");
-  for (const value of values) {
-    const column = element("div", "chart-column");
-    const bar = element("div", "chart-bar");
-    bar.style.height = `${Math.max(3, (value.total / maximum) * 125)}px`;
-    column.append(element("span", "chart-count", number(value.total)), bar);
-    chart.append(column);
-    labels.append(element("span", "", dateLabel(value.date)));
+  document.querySelector("#calendar-week").textContent =
+    `${dateLabel(days[0].date)} – ${dateLabel(days[6].date, { year: "numeric" })}`;
+  document.querySelector("#next-week").disabled = weekOffset >= 0;
+  const grid = element("ol", "attendance-calendar");
+  for (const [index, day] of days.entries()) {
+    const tile = element(
+      "li",
+      `calendar-day${day.count ? " attended" : ""}${day.today ? " is-today" : ""}`,
+    );
+    tile.setAttribute(
+      "aria-label",
+      `${dateLabel(day.date, { year: "numeric" })}: ${day.count} ${day.count === 1 ? "clase asistida" : "clases asistidas"}${day.today ? ", hoy" : ""}`,
+    );
+    if (day.today) tile.setAttribute("aria-current", "date");
+    tile.append(
+      element("span", "day-name", ["L", "M", "Mi", "J", "V", "S", "D"][index]),
+      element("strong", "day-number", day.date.slice(8)),
+    );
+    const check = element("span", "day-check", day.count ? "✓" : "·");
+    check.setAttribute("aria-hidden", "true");
+    tile.append(check);
+    grid.append(tile);
   }
-  parent.replaceChildren(chart, labels);
+  parent.replaceChildren(grid);
+  if (!attended.length)
+    parent.append(
+      element(
+        "p",
+        "calendar-empty",
+        "Aún no tienes asistencias confirmadas. Tu calendario se llenará cuando el administrador las registre.",
+      ),
+    );
 }
 
 function renderCategories(totals) {
   const parent = document.querySelector("#category-list");
-  const categories = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+  const categories = categoryShares(totals);
   if (!categories.length) {
     empty(
       parent,
@@ -104,27 +94,74 @@ function renderCategories(totals) {
     );
     return;
   }
-  const maximum = Math.max(...categories.map(([, total]) => total));
   parent.replaceChildren();
-  for (const [name, total] of categories) {
-    const row = element("div");
-    const top = element("div", "category-top");
-    top.append(
-      element("span", "", name),
+  const colors = [
+    "#e5c92f",
+    "#2e57ae",
+    "#b4b6ba",
+    "#6d8174",
+    "#bd6b44",
+    "#8a68aa",
+  ];
+  const pie = element("div", "category-pie");
+  pie.setAttribute("role", "img");
+  pie.setAttribute(
+    "aria-label",
+    categories
+      .map(
+        ({ name, count, percent }) =>
+          `${name}: ${count} clases, ${number(percent, 1)} %`,
+      )
+      .join(". "),
+  );
+  let cursor = 0;
+  const stops = categories.map(({ percent }, index) => {
+    const start = cursor;
+    cursor += percent;
+    return `${colors[index % colors.length]} ${start}% ${cursor}%`;
+  });
+  pie.style.background = `conic-gradient(${stops.join(",")})`;
+  const legend = element("ul", "category-legend");
+  for (const [{ name, count, percent }, index] of categories.map(
+    (value, index) => [value, index],
+  )) {
+    const row = element("li");
+    const swatch = element("span", "legend-dot");
+    swatch.style.backgroundColor = colors[index % colors.length];
+    swatch.setAttribute("aria-hidden", "true");
+    row.append(
+      swatch,
+      element("span", "category-name", name),
+      element("strong", "", `${number(percent, 1)} %`),
+      element("span", "category-total", `(${number(count)})`),
+    );
+    legend.append(row);
+  }
+  parent.append(pie, legend);
+}
+
+function renderRecords(records) {
+  const parent = document.querySelector("#records-summary");
+  const latest = [...records]
+    .sort((a, b) => b.achieved_on.localeCompare(a.achieved_on) || b.id - a.id)
+    .slice(0, 2);
+  parent.replaceChildren();
+  if (!latest.length)
+    parent.append(
       element(
-        "strong",
+        "p",
         "",
-        `${number(total)} ${total === 1 ? "clase" : "clases"}`,
+        "Todavía no has guardado marcas. Pulsa Editar para registrar la primera.",
       ),
     );
-    const track = element("div", "category-track");
-    track.setAttribute("aria-hidden", "true");
-    const fill = element("div", "category-fill");
-    fill.style.width = `${(total / maximum) * 100}%`;
-    track.append(fill);
-    row.append(top, track);
-    parent.append(row);
-  }
+  for (const item of latest)
+    parent.append(
+      element(
+        "p",
+        "",
+        `${item.exercise}: ${number(Number(item.value))} ${item.unit} · ${dateLabel(item.achieved_on, { year: "numeric" })}`,
+      ),
+    );
 }
 
 function renderClasses(values, selector, future) {
@@ -168,6 +205,7 @@ function renderClasses(values, selector, future) {
 function clear() {
   activeLoad?.abort();
   attended = [];
+  weekOffset = 0;
   for (const selector of [
     "#total-attended",
     "#weekly-streak",
@@ -179,6 +217,7 @@ function clear() {
     "#category-list",
     "#attended-list",
     "#upcoming-list",
+    "#records-summary",
   ])
     document.querySelector(selector).replaceChildren();
   document.querySelector("#retry-button").hidden = true;
@@ -196,17 +235,31 @@ async function load() {
   const signal = activeLoad.signal;
   const refresh = document.querySelector("#refresh-button");
   refresh.disabled = true;
+  document.querySelector("#previous-week").disabled = true;
+  document.querySelector("#next-week").disabled = true;
   document.querySelector("#retry-button").hidden = true;
   status("loading", "Cargando tu progreso y tus clases…");
+  showData(true);
+  for (const selector of [
+    "#activity-chart",
+    "#category-list",
+    "#records-summary",
+    "#attended-list",
+    "#upcoming-list",
+  ]) {
+    const message = element("p", "panel-loading", "Cargando tu progreso…");
+    document.querySelector(selector).replaceChildren(message);
+  }
   document.querySelector("#page-data").setAttribute("aria-busy", "true");
   try {
     ({ timeZone } = await getConfiguration());
     today = await businessToday();
     const route = `/users/${session.user.id}`;
-    const [progress, past, reserved] = await Promise.all([
+    const [progress, past, reserved, records] = await Promise.all([
       request(`${route}/progress`, { signal }),
       listAll(`${route}/reservations?status=attended`, signal),
       listAll(`${route}/reservations?status=reserved`, signal),
+      listAll(`${route}/personal-records`, signal),
     ]);
     if (signal.aborted || session.accessToken !== getSession()?.accessToken)
       return;
@@ -222,6 +275,7 @@ async function load() {
     );
     renderActivity();
     renderCategories(progress.categoryTotals);
+    renderRecords(records);
     renderClasses(
       [...past].sort((a, b) => b.starts_at.localeCompare(a.starts_at)),
       "#attended-list",
@@ -237,20 +291,29 @@ async function load() {
     status("success", "Tu progreso está actualizado.");
   } catch (error) {
     if (error.name !== "AbortError") {
+      showData(false);
+      document.querySelector("#guest-state").hidden = Boolean(getSession());
       status("error", errorMessage(error));
       document.querySelector("#retry-button").hidden = !getSession();
     }
   } finally {
     if (activeLoad?.signal === signal) {
       refresh.disabled = false;
+      document.querySelector("#previous-week").disabled = false;
+      document.querySelector("#next-week").disabled = weekOffset >= 0;
       document.querySelector("#page-data").setAttribute("aria-busy", "false");
     }
   }
 }
 
-document
-  .querySelector("#weeks-filter")
-  .addEventListener("change", renderActivity);
+document.querySelector("#previous-week").addEventListener("click", () => {
+  weekOffset -= 1;
+  renderActivity();
+});
+document.querySelector("#next-week").addEventListener("click", () => {
+  if (weekOffset < 0) weekOffset += 1;
+  renderActivity();
+});
 for (const selector of ["#refresh-button", "#retry-button"])
   document.querySelector(selector).addEventListener("click", load);
 initialize(load, clear).catch((error) => status("error", errorMessage(error)));

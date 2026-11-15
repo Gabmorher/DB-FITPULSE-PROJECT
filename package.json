@@ -18,6 +18,7 @@
     "db:inspect": "node scripts/export-model.js",
     "db:migrate-passwords": "node scripts/migrate-passwords.js",
     "test:passwords": "node --test tests/passwords.test.js",
+    "test:progress": "node --test tests/progress-data.test.js",
     "test:credential-tools": "node tests/credential-tools.js"
   },
   "dependencies": {

@@ -7,7 +7,7 @@
       name="description"
       content="Mira tu constancia, descubre qué actividades practicas y sigue avanzando a tu ritmo."
     />
-    <meta name="theme-color" content="#173e35" />
+    <meta name="theme-color" content="#e8cf3f" />
     <title>Mi progreso · FitPulse</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="/css/app.css" />
@@ -34,12 +34,8 @@
       </header>
       <section class="hero" aria-labelledby="page-title">
         <div>
-          <span class="eyebrow">CADA ASISTENCIA CUENTA</span>
-          <h1 id="page-title">Tu progreso,<br /><span>paso a paso.</span></h1>
-          <p>
-            Mira tu constancia, descubre qué actividades practicas y sigue
-            avanzando a tu ritmo.
-          </p>
+          <h1 id="page-title">Mi progreso</h1>
+          <p>Monitorea tus estadísticas, rendimiento y marcas personales.</p>
         </div>
         <div class="hero-actions">
           <button class="button" id="refresh-button" type="button">
@@ -98,41 +94,63 @@
             ><span class="stat-detail">Variedad en tu entrenamiento</span>
           </article>
         </section>
-        <div class="content-grid">
-          <section class="panel" aria-labelledby="activity-heading">
+        <div class="content-grid progress-grid">
+          <section
+            class="panel calendar-panel"
+            aria-labelledby="activity-heading"
+          >
             <div class="panel-header">
-              <div>
-                <h2 id="activity-heading">Tu constancia, semana a semana</h2>
-                <p class="panel-subtitle">Clases con asistencia confirmada</p>
-              </div>
-              <label class="visually-hidden" for="weeks-filter"
-                >Semanas del gráfico</label
-              ><select id="weeks-filter">
-                <option value="8">Últimas 8 semanas</option>
-                <option value="4">Últimas 4 semanas</option>
-                <option value="12">Últimas 12 semanas</option>
-              </select>
+              <h2 id="activity-heading">Calendario de racha</h2>
+              <span data-icon="calendar"></span>
+            </div>
+            <p class="panel-subtitle">Tus días con asistencia confirmada</p>
+            <div class="calendar-navigation">
+              <button
+                class="icon-button"
+                id="previous-week"
+                type="button"
+                aria-label="Semana anterior"
+              >
+                ‹
+              </button>
+              <strong id="calendar-week">Esta semana</strong>
+              <button
+                class="icon-button"
+                id="next-week"
+                type="button"
+                aria-label="Semana siguiente"
+                disabled
+              >
+                ›
+              </button>
             </div>
             <div id="activity-chart"></div>
-            <div class="chart-legend">
-              <span class="legend-dot"></span
-              ><span>Cada semana comienza el lunes</span>
-            </div>
+            <p class="calendar-key">
+              <span class="legend-dot"></span> Día asistido
+              <span class="today-key"></span> Hoy
+            </p>
           </section>
           <section class="panel" aria-labelledby="category-heading">
             <div class="panel-header">
-              <div>
-                <h2 id="category-heading">Encuentra tu equilibrio</h2>
-                <p class="panel-subtitle">Tus asistencias por categoría</p>
-              </div>
+              <h2 id="category-heading">Gráfico de categorías</h2>
+              <span data-icon="chart"></span>
             </div>
+            <p class="panel-subtitle">Distribución de tus clases asistidas</p>
             <div id="category-list" class="category-list"></div>
-            <p class="panel-footer">
-              Cada tipo de clase suma a tu recorrido. Aquí ves las actividades
-              que has practicado.
-            </p>
           </section>
         </div>
+        <section
+          class="panel records-summary"
+          aria-labelledby="summary-heading"
+        >
+          <div>
+            <h2 id="summary-heading">Registro de marcas personales</h2>
+            <div id="records-summary"></div>
+          </div>
+          <a class="button button-primary" href="/personal-records.html"
+            >Editar <span data-icon="edit"></span
+          ></a>
+        </section>
         <div class="bottom-grid">
           <section class="panel" aria-labelledby="history-heading">
             <div class="panel-header">
@@ -156,18 +174,6 @@
             <div id="upcoming-list" class="history-list"></div>
           </section>
         </div>
-        <section class="callout">
-          <div>
-            <h2>Tu avance también se mide en pequeños logros.</h2>
-            <p>
-              Guarda tus marcas de fuerza, distancia o tiempo y consulta tu
-              evolución.
-            </p>
-          </div>
-          <a class="button button-lime" href="/personal-records.html"
-            >Ver mis marcas <span data-icon="arrow"></span
-          ></a>
-        </section>
       </div>
       <footer class="footer">
         <span>FitPulse · Tu entrenamiento, con propósito.</span

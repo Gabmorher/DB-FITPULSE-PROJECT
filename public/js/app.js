@@ -22,6 +22,7 @@ const icons = {
   calendar:
     '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4m8-4v4M4 10h16"/>',
   check: '<path d="m5 12 4 4L19 6"/>',
+  eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
 };
 
 export function icon(name) {
@@ -88,14 +89,14 @@ export function showData(show) {
 function mountShell() {
   const page = document.body.dataset.page;
   document.querySelector("#sidebar").innerHTML = `
-    <a class="brand" href="/progress.html" aria-label="FitPulse, mi progreso"><span class="brand-mark">${icon("pulse")}</span>FitPulse<span class="brand-dot">.</span></a>
-    <p class="nav-caption">TU ESPACIO</p>
+    <a class="brand" href="/progress.html" aria-label="FitPulse, mi progreso"><span class="wordmark"><span>Fit</span>Pulse</span></a>
+    <p class="nav-caption">MI ESPACIO</p>
     <nav aria-label="Navegación principal">
       <a href="/progress.html" ${page === "progress" ? 'aria-current="page"' : ""}>${icon("chart")}<span>Mi progreso</span></a>
       <a href="/personal-records.html" ${page === "records" ? 'aria-current="page"' : ""}>${icon("record")}<span>Mis marcas</span></a>
     </nav>
-    <div class="sidebar-note"><span class="note-line"></span><p>Un registro hoy.<br>Una nueva meta mañana.</p><a href="/personal-records.html">Registra tu avance ${icon("arrow")}</a></div>
-    <div class="account"><span class="avatar" id="user-avatar">FP</span><div><strong id="user-name">Tu espacio personal</strong><span id="user-role">Inicia sesión para continuar</span></div></div>
+    <div class="sidebar-note"><p>Cada clase cuenta.</p><a href="/personal-records.html">Registra tu avance ${icon("arrow")}</a></div>
+    <div class="account"><div><strong id="user-name">Hola, visitante</strong><span id="user-role">Tu espacio personal</span></div><span class="avatar" id="user-avatar">FP</span></div>
     <button class="logout" id="logout-button" type="button" hidden>${icon("logout")} Cerrar sesión</button>`;
   document.querySelectorAll("[data-icon]").forEach((node) => {
     node.innerHTML = icon(node.dataset.icon);
@@ -103,23 +104,24 @@ function mountShell() {
   document.querySelector("#auth-dialog").innerHTML = `
     <form id="auth-form" class="dialog-form">
       <button class="icon-button dialog-close" type="button" data-close aria-label="Cerrar ventana">${icon("close")}</button>
-      <span class="eyebrow">BIENVENIDO A FITPULSE</span>
-      <h2 id="auth-heading">Tu próximo avance<br>empieza aquí.</h2>
-      <p class="muted">Accede a tu progreso y a tus marcas personales.</p>
+      <p class="auth-welcome" id="auth-welcome">Bienvenido a</p>
+      <h2 id="auth-heading" class="auth-wordmark"><span>Fit</span>Pulse</h2>
       <div class="tab-list" role="group" aria-label="Tipo de acceso"><button type="button" id="login-tab" aria-pressed="true">Iniciar sesión</button><button type="button" id="register-tab" aria-pressed="false">Crear cuenta</button></div>
       <label id="name-field" hidden>Nombre<input name="name" autocomplete="name" maxlength="45"></label>
       <label>Correo electrónico<input name="email" type="email" autocomplete="username" maxlength="254" required placeholder="tu@correo.com"></label>
-      <label>Contraseña<input name="password" type="password" autocomplete="current-password" minlength="8" maxlength="200" required placeholder="Mínimo 8 caracteres"></label>
+      <label for="account-password">Contraseña (mínimo 8 caracteres)</label>
+      <div class="password-control"><input id="account-password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="200" required><button type="button" id="show-password" class="password-toggle" aria-label="Mostrar contraseña" aria-pressed="false">${icon("eye")}</button></div>
+      <label id="confirm-field" hidden>Verifica tu contraseña<input name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="200"></label>
       <p id="auth-error" class="form-error" role="alert" hidden></p>
-      <button class="button button-primary" type="submit" id="auth-submit">Entrar a mi espacio</button>
-      <p class="form-footnote">Tu información pertenece a tu cuenta.</p>
+      <button class="button button-primary" type="submit" id="auth-submit">Iniciar sesión</button>
+      <p class="form-footnote">Consulta tus clases y guarda tus marcas personales.</p>
     </form>`;
 }
 
 function updateAccount() {
   const session = getSession();
-  const name = session?.user.name || "Tu espacio personal";
-  document.querySelector("#user-name").textContent = name;
+  const name = session?.user.name || "visitante";
+  document.querySelector("#user-name").textContent = `Hola, ${name}`;
   document.querySelector("#user-avatar").textContent = session
     ? name
         .split(/\s+/)
@@ -148,6 +150,13 @@ export async function initialize(load, clear) {
   const switchMode = (value) => {
     registration = value;
     document.querySelector("#name-field").hidden = !value;
+    document.querySelector("#confirm-field").hidden = !value;
+    form.elements.confirmPassword.required = value;
+    form.elements.confirmPassword.value = "";
+    form.elements.confirmPassword.setCustomValidity("");
+    document.querySelector("#auth-welcome").textContent = value
+      ? "Regístrate en"
+      : "Bienvenido a";
     form.elements.name.required = value;
     form.elements.password.autocomplete = value
       ? "new-password"
@@ -155,8 +164,8 @@ export async function initialize(load, clear) {
     document.querySelector("#login-tab").setAttribute("aria-pressed", !value);
     document.querySelector("#register-tab").setAttribute("aria-pressed", value);
     document.querySelector("#auth-submit").textContent = value
-      ? "Crear mi cuenta"
-      : "Entrar a mi espacio";
+      ? "Crear cuenta"
+      : "Iniciar sesión";
     document.querySelector("#auth-error").hidden = true;
   };
   document
@@ -170,7 +179,36 @@ export async function initialize(load, clear) {
     .addEventListener("click", () => dialog.close());
   dialog.addEventListener("close", () => {
     form.elements.password.value = "";
+    form.elements.confirmPassword.value = "";
+    form.elements.confirmPassword.setCustomValidity("");
+    form.elements.password.type = "password";
+    document
+      .querySelector("#show-password")
+      .setAttribute("aria-pressed", "false");
+    document
+      .querySelector("#show-password")
+      .setAttribute("aria-label", "Mostrar contraseña");
   });
+  document
+    .querySelector("#show-password")
+    .addEventListener("click", (event) => {
+      const visible = form.elements.password.type === "password";
+      form.elements.password.type = visible ? "text" : "password";
+      event.currentTarget.setAttribute("aria-pressed", visible);
+      event.currentTarget.setAttribute(
+        "aria-label",
+        visible ? "Ocultar contraseña" : "Mostrar contraseña",
+      );
+    });
+  const confirmPassword = () =>
+    form.elements.confirmPassword.setCustomValidity(
+      registration &&
+        form.elements.confirmPassword.value !== form.elements.password.value
+        ? "Las contraseñas no coinciden."
+        : "",
+    );
+  form.elements.confirmPassword.addEventListener("input", confirmPassword);
+  form.elements.password.addEventListener("input", confirmPassword);
   document
     .querySelectorAll("[data-sign-in]")
     .forEach((button) =>
@@ -182,6 +220,7 @@ export async function initialize(load, clear) {
   });
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    confirmPassword();
     if (!form.reportValidity()) return;
     const button = document.querySelector("#auth-submit");
     const errorPanel = document.querySelector("#auth-error");
@@ -206,6 +245,7 @@ export async function initialize(load, clear) {
         body: { email, password },
       });
       form.elements.password.value = "";
+      form.elements.confirmPassword.value = "";
       dialog.close();
       setSession(session);
     } catch (error) {
