@@ -40,6 +40,7 @@
   --color-error-deep: #8b0000;
   --color-error-soft: #e5b3b3;
   --color-focus: #305bba;
+  --color-today: #24408e;
   --radius: 8px;
   --radius-pill: 999px;
   --header-height: 100px;
@@ -289,6 +290,10 @@ select.field-input {
 .status-badge-positive {
   background: #34c759;
   color: var(--color-black);
+}
+.status-badge-neutral {
+  background: var(--color-field);
+  color: var(--color-ink);
 }
 .status-badge-negative {
   background: var(--color-error);

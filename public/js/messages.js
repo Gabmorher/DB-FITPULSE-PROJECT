@@ -33,6 +33,7 @@ const translations = {
     "Ya tienes una reserva para esta clase.",
   "The class has already started": "Esta clase ya comenzó. Elige otra.",
   "Class not found": "Esta clase ya no existe. Actualiza el catálogo.",
+  "Package not found": "Este paquete ya no existe. Actualiza la lista.",
   "Internal server error":
     "El servidor no pudo completar la operación. Inténtalo nuevamente.",
 };

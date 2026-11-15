@@ -80,3 +80,9 @@ export function bindPasswordToggle(button, input) {
   });
   render();
 }
+
+export function loadingState(message) {
+  const loading = element("div", "loading-state");
+  loading.append(element("span", "spinner"), element("p", "", message));
+  return loading;
+}

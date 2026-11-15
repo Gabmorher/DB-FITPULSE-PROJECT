@@ -1,13 +1,14 @@
 import { getConfiguration } from "./api.js";
 
-const currency = new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0 });
+const thousandsPattern = /\B(?=(\d{3})+(?!\d))/g;
 
 export function apiDate(value) {
   return new Date(`${value.replace(" ", "T")}Z`);
 }
 
 export function money(value) {
-  return `${currency.format(Number(value))} COP`;
+  const digits = Math.round(Number(value)).toString();
+  return `${digits.replace(thousandsPattern, ".")} COP`;
 }
 
 export function capitalize(value) {
@@ -32,7 +33,15 @@ export async function scheduleFormatter() {
     hour: "numeric",
     hourCycle: "h23",
   });
+  const dateKey = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const today = dateKey.format(new Date());
   return {
+    isToday: (value) => dateKey.format(apiDate(value)) === today,
     day: (value) => capitalize(day.format(apiDate(value))),
     time: (value) => time.format(apiDate(value)),
     hour: (value) => Number(hour.format(apiDate(value))),

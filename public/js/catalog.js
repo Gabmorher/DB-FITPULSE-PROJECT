@@ -1,8 +1,8 @@
 import { request, listAll } from "./api.js";
 import { errorMessage } from "./messages.js";
-import { element, status, setBusy } from "./ui.js";
+import { element, status, setBusy, loadingState } from "./ui.js";
 import { money, capitalize, apiDate, scheduleFormatter } from "./format.js";
-import { imageFor } from "./class-images.js";
+import { classCard, detail, toggleDescription } from "./class-card.js";
 import { showResult } from "./modal.js";
 import { initializePage } from "./shell.js";
 
@@ -54,32 +54,9 @@ function matchesFilters(item) {
   );
 }
 
-function detail(label, value) {
-  const line = element("p");
-  line.append(element("strong", "", `${label}: `), value);
-  return line;
-}
-
-function classPhoto(item) {
-  const photo = element("figure", "class-photo");
-  const image = element("img");
-  image.src = imageFor(item.category);
-  image.alt = `Clase de ${capitalize(item.category)}`;
-  const description = element("p", "class-description", item.description);
-  description.hidden = true;
-  const toggle = element("button", "description-toggle", "ver descripción");
-  toggle.type = "button";
-  toggle.dataset.action = "describe";
-  toggle.setAttribute("aria-expanded", "false");
-  photo.append(image, description, toggle);
-  return photo;
-}
-
-function classCard(item) {
+function catalogItem(item) {
   const wrapper = element("article", "class-item");
-  const card = element("div", "class-card");
-  const details = element("div", "class-details");
-  details.append(
+  const card = classCard(item, [
     detail("Disciplina", capitalize(item.category)),
     detail("Instructor", item.instructor_name),
     detail("Día", schedule.day(item.starts_at)),
@@ -92,8 +69,7 @@ function classCard(item) {
       `${item.capacity - item.available_spots}/${item.capacity} ocupados`,
     ),
     detail("Precio", money(item.price)),
-  );
-  card.append(element("h2", "", item.name), classPhoto(item), details);
+  ]);
   const reserveButton = element("button", "button", "Reservar");
   reserveButton.type = "button";
   reserveButton.dataset.action = "reserve";
@@ -111,20 +87,11 @@ function renderClasses() {
     grid.replaceChildren(element("p", "empty-state", message));
     return;
   }
-  grid.replaceChildren(...visible.map(classCard));
-}
-
-function showLoading() {
-  const loading = element("div", "loading-state");
-  loading.append(
-    element("span", "spinner"),
-    element("p", "", "Cargando clases…"),
-  );
-  grid.replaceChildren(loading);
+  grid.replaceChildren(...visible.map(catalogItem));
 }
 
 async function loadClasses() {
-  showLoading();
+  grid.replaceChildren(loadingState("Cargando clases…"));
   status("", "");
   try {
     schedule ??= await scheduleFormatter();
@@ -138,13 +105,6 @@ async function loadClasses() {
     grid.replaceChildren();
     status("error", errorMessage(error));
   }
-}
-
-function toggleDescription(button) {
-  const description = button.parentElement.querySelector(".class-description");
-  description.hidden = !description.hidden;
-  button.textContent = description.hidden ? "ver descripción" : "ocultar";
-  button.setAttribute("aria-expanded", String(!description.hidden));
 }
 
 async function reserve(button) {
